@@ -41,6 +41,7 @@ Charger got refunded! Yay!
         animation: none;
       }
     }
+
   </style>
 
   <svg viewBox="0 0 220 220" width="220" height="220" aria-hidden="true">
