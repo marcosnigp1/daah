@@ -1,0 +1,24 @@
+---
+title: "Digital Literacy Reflection — Claude"
+permalink: /schedule/digital-literacy/claude/
+author_profile: false
+---
+
+# Digital Literacy Reflection
+
+**Author:** Junior, double major in Environmental Studies and Creative Writing
+**Word count:** ~750
+
+---
+
+I came into this course assuming "digital literacy" meant something I'd already checked off — I can format a Google Doc, I know my way around Instagram, I've used Excel for a lab report. What this class has actually shown me is that literacy here isn't a single skill but a stack of overlapping competencies: creating content, managing my digital identity, handling data responsibly, and now, increasingly, knowing how to work _with_ AI rather than just around it. Sitting in a room with computer science majors, engineers, film students, and literature people has made that stack visible in a way it never was when I only compared notes with people in my own department.
+
+**What I already do, without always naming it as "digital literacy."** On the content-creation side, I write for a campus environmental blog and edit short videos for our sustainability club's Instagram, which means I'm constantly making small rhetorical decisions about audience, platform norms, and pacing — skills that overlap more with my creative writing training than I used to admit. For research, I live in Zotero for citation management, and I've picked up just enough command-line comfort to run basic R scripts for the climate datasets in my environmental studies seminar — mostly cleaning CSVs and making time-series plots in ggplot2. For qualitative work, I use NVivo to code interview transcripts for a project on community responses to coastal flooding. None of this felt like "data science" to me before this course; it felt like just doing the assignment. Reframing it as computational thinking — breaking a messy research question into steps a tool can help with — has been clarifying.
+
+**What the interdisciplinary room adds.** Watching a CS major debug a scraping script in five minutes, or a film student talk fluently about compression artifacts and color grading, forces me to recognize how narrow my own fluency is. I'm decent at structuring an argument and reasonably comfortable with a spreadsheet, but I have almost no intuition for anything below the interface layer — how a database is structured, what an API actually does when I "just call" it. Meanwhile, I've noticed some of the more technical students treat text as a fixed, low-stakes input; they're less attuned to how ambiguous language is, how much interpretation a "dataset" of interview transcripts or archival letters actually requires. That mutual gap seems like exactly where digital humanities lives: not computer science applied to old books, and not literary theory politely tolerating spreadsheets, but a genuine merging of interpretive and computational habits of mind. My environmental studies side already flirts with this — GIS work, remote sensing data, climate models — but I hadn't thought to connect it to what humanities-flavored digital methods (text mining letters, mapping migration narratives, network-analyzing correspondence) are doing with similarly "leaky," human-generated data.
+
+**Collaboration as a literacy multiplier.** Group work in this class has been less about splitting tasks and more about translation — explaining to a teammate why a variable name matters for reproducibility, or having someone explain to me why their model needs the data in "tidy" long format instead of the wide format I instinctively reach for. That translation work is, I think, computational thinking in its most honest form: not writing code, but restructuring a problem so that a tool, or a collaborator, can act on it. I want more of that friction, honestly, not less.
+
+**Where AI fits, critically.** I use AI tools for early drafting and for untangling error messages I don't yet understand, but this course has made me more suspicious of my own fluency with them. It's easy to get a plausible-sounding answer to a stats question or a suggested regex and never build the underlying model in my head. I want to get better at using AI as a Socratic partner rather than an answer machine — asking it to explain _why_ a method works, or to critique my own analysis, rather than to produce the analysis for me.
+
+**Looking ahead**, I'd like to get real command-line and Python fluency instead of copy-pasting R snippets I half understand, and I want to spend real time in a GIS or network-analysis tool that isn't just point-and-click. More than any specific tool, though, I want to keep this room's habit of interdisciplinary translation going after the semester ends — because the most useful literacy I'm building here isn't any single skill, it's the ability to sit next to someone who thinks completely differently and actually learn something.
