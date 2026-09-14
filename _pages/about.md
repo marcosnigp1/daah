@@ -37,17 +37,28 @@ Charger got refunded! Yay!
 
     @media (prefers-reduced-motion: reduce) {
       .stick-jump__figure,
-      .stick-jump__shadow {
+      .stick-jump__shadow,
+      .stick-jump__motion {
         animation: none;
+        display: none;
       }
     }
   </style>
 
   <svg viewBox="0 0 220 220" width="220" height="220" aria-hidden="true">
     <line class="stick-jump__shadow" x1="55" y1="190" x2="165" y2="190"
-      stroke="currentColor" stroke-width="12" stroke-linecap="round" />
+      stroke="currentColor" stroke-width="12" stroke-linecap="round">
+      <animateTransform class="stick-jump__motion" attributeName="transform" type="scale" additive="replace"
+        values="1 1;0.55 1;1 1" keyTimes="0;0.5;1"
+        dur="1.1s" repeatCount="indefinite" />
+      <animate class="stick-jump__motion" attributeName="opacity" values="0.35;0.12;0.35"
+        dur="1.1s" repeatCount="indefinite" />
+    </line>
     <g class="stick-jump__figure" fill="none" stroke="currentColor"
       stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <animateTransform class="stick-jump__motion" attributeName="transform" type="translate"
+        values="0 0;0 -40;0 0" keyTimes="0;0.5;1"
+        dur="1.1s" repeatCount="indefinite" />
       <circle cx="110" cy="54" r="25" fill="#ffd166" />
       <path d="M96 50h4M120 50h4M101 65q9 8 18 0" />
       <path d="M110 79v62M110 94L76 72M110 94l34-22M110 141l-28 37M110 141l28 37" />
