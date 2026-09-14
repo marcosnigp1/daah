@@ -13,21 +13,22 @@ Charger got refunded! Yay!
       text-align: center;
     }
 
-    .stick-jump__figure {
-      transform-box: fill-box;
-      transform-origin: center bottom;
+    .stick-jump__bounce {
       animation: stick-jump 1.1s ease-in-out infinite;
     }
 
     .stick-jump__shadow {
-      transform-box: fill-box;
-      transform-origin: center;
+      width: 110px;
+      height: 12px;
+      margin: -32px auto 20px;
+      border-radius: 50%;
+      background: currentColor;
       animation: stick-shadow 1.1s ease-in-out infinite;
     }
 
     @keyframes stick-jump {
       0%, 100% { transform: translateY(0) rotate(-4deg); }
-      50% { transform: translateY(-2.5rem) rotate(4deg); }
+      50% { transform: translateY(-40px) rotate(4deg); }
     }
 
     @keyframes stick-shadow {
@@ -36,7 +37,7 @@ Charger got refunded! Yay!
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .stick-jump__figure,
+      .stick-jump__bounce,
       .stick-jump__shadow {
         animation: none;
       }
@@ -44,18 +45,19 @@ Charger got refunded! Yay!
 
   </style>
 
-  <svg viewBox="0 0 220 220" width="220" height="220" aria-hidden="true">
-    <line class="stick-jump__shadow" x1="55" y1="190" x2="165" y2="190"
-      stroke="currentColor" stroke-width="12" stroke-linecap="round" />
-    <g class="stick-jump__figure" fill="none" stroke="currentColor"
+  <div class="stick-jump__bounce">
+    <svg viewBox="0 0 220 220" width="220" height="220" aria-hidden="true">
+      <g fill="none" stroke="currentColor"
       stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="110" cy="54" r="25" fill="#ffd166" />
       <path d="M96 50h4M120 50h4M101 65q9 8 18 0" />
       <path d="M110 79v62M110 94L76 72M110 94l34-22M110 141l-28 37M110 141l28 37" />
       <path d="M73 72l-12-13M147 72l12-13M82 178l-14 4M138 178l14 4" />
-    </g>
-    <text x="110" y="215" text-anchor="middle" font-size="13" fill="currentColor">
-      boing!
-    </text>
-  </svg>
+      </g>
+      <text x="110" y="215" text-anchor="middle" font-size="13" fill="currentColor">
+        boing!
+      </text>
+    </svg>
+  </div>
+  <div class="stick-jump__shadow"></div>
 </div>
