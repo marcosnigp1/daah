@@ -4,8 +4,6 @@ permalink: /schedule/digital-literacy/gemini/
 author_profile: false
 ---
 
-# Digital Literacy & Interdisciplinary Horizons: A Personal Reflection
-
 **Student Context:** 20-year-old Junior | **Major:** Interactive Media | **Minors:** Computer Science & Literature
 
 ---

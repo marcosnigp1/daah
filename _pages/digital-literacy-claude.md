@@ -4,8 +4,6 @@ permalink: /schedule/digital-literacy/claude/
 author_profile: false
 ---
 
-# Digital Literacy Reflection
-
 **Author:** Junior, double major in Environmental Studies and Creative Writing
 **Word count:** ~750
 

@@ -4,8 +4,6 @@ permalink: /schedule/digital-literacy/chatgpt/
 author_profile: false
 ---
 
-# Reflection on Digital Literacy
-
 As a 20-year-old university student majoring in Interactive Media, I have realized that digital literacy is something I use almost every day, even when I do not consciously think about it. A large part of my education involves working with digital tools, creating media, researching information, and communicating with other people. Because of this, I often think of myself as digitally literate. However, this course has made me realize that digital literacy is not only about knowing how to use software. It is also about understanding how digital information is created, organized, interpreted, and shared.
 
 In my daily and academic life, I already use different strategies for creating and communicating digitally. I use platforms such as Google Docs and Microsoft Office for writing and organizing assignments, while Discord, WhatsApp, and email are important for communicating with classmates. For content creation, I have experience with software such as Unity, Blender, TouchDesigner, and image editing tools. These programs allow me to create interactive experiences, 3D environments, visuals, and other forms of digital media. I have also learned that creating something digitally is not simply about knowing which buttons to press. It involves making decisions about how information should be presented and how another person will experience it.
