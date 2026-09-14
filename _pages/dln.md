@@ -4,13 +4,15 @@ permalink: /schedule/
 author_profile: false
 ---
 
-# Week 2
+<br>
 
-## Digital Literacy Reflections
+### Week 2
+
+#### Digital Literacy Reflections
 
 This collection brings together three reflections on digital literacy, interdisciplinary learning, computational thinking, and the critical use of artificial intelligence.
 
-### Reflections
+##### Reflections
 
 - [Digital Literacy Reflection — Gemini]({{ '/schedule/digital-literacy/gemini/' | relative_url }})  
   A reflection on digital tools, digital humanities, computational thinking, and ethical engagement with AI.
