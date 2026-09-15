@@ -6,8 +6,6 @@ author_profile: true
 
 Hi, I am Marcos Hernandez and I enjoy programming, playing video games and experimenting with technology.
 
-_Charger got refunded! Yay!_
-
 <div class="stick-jump" role="img" aria-label="A silly stick figure repeatedly jumping for joy">
   <style>
     .stick-jump {
