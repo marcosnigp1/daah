@@ -1,6 +1,6 @@
 ---
 title: "Digital Literacy Reflection — Gemini"
-permalink: /schedule/digital-literacy/gemini/
+permalink: /dln/digital-literacy/gemini/
 author_profile: false
 ---
 

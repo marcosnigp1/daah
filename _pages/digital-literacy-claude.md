@@ -1,6 +1,6 @@
 ---
 title: "Digital Literacy Reflection — Claude"
-permalink: /schedule/digital-literacy/claude/
+permalink: /dln/digital-literacy/claude/
 author_profile: false
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: "Schedule F26"
-permalink: /schedule/
+title: "Digital Literacy Narrative"
+permalink: /dln/
 author_profile: false
 ---
 
@@ -14,9 +14,9 @@ This collection brings together three reflections on digital literacy, interdisc
 
 ##### Reflections
 
-- [Digital Literacy Reflection — Gemini]({{ '/schedule/digital-literacy/gemini/' | relative_url }})  
+- [Digital Literacy Reflection — Gemini]({{ '/dln/digital-literacy/gemini/' | relative_url }})  
   A reflection on digital tools, digital humanities, computational thinking, and ethical engagement with AI.
-- [Reflection on Digital Literacy — ChatGPT]({{ '/schedule/digital-literacy/chatgpt/' | relative_url }})  
+- [Reflection on Digital Literacy — ChatGPT]({{ '/dln/digital-literacy/chatgpt/' | relative_url }})  
   A reflection on everyday digital practices, interdisciplinary collaboration, and developing computational thinking.
-- [Digital Literacy Reflection — Claude]({{ '/schedule/digital-literacy/claude/' | relative_url }})  
+- [Digital Literacy Reflection — Claude]({{ '/dln/digital-literacy/claude/' | relative_url }})  
   A reflection on environmental studies, creative writing, data practices, and interdisciplinary translation.
