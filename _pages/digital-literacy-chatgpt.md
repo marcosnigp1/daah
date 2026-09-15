@@ -1,6 +1,6 @@
 ---
 title: "Reflection on Digital Literacy — ChatGPT"
-permalink: /schedule/digital-literacy/chatgpt/
+permalink: /dln/digital-literacy/chatgpt/
 author_profile: false
 ---
 
