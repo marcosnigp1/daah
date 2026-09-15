@@ -57,9 +57,6 @@ _Charger got refunded! Yay!_
       <path d="M110 79v62M110 94L76 72M110 94l34-22M110 141l-28 37M110 141l28 37" />
       <path d="M73 72l-12-13M147 72l12-13M82 178l-14 4M138 178l14 4" />
       </g>
-      <text x="110" y="215" text-anchor="middle" font-size="13" fill="currentColor">
-        boing!
-      </text>
     </svg>
   </div>
   <div class="stick-jump__shadow"></div>
