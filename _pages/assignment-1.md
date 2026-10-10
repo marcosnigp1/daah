@@ -70,7 +70,10 @@ As mentioned in the previous method, there was an outlier that we needed to iden
 The first step we made was to look for the first top 15 words that are the less frequent using the TF-IDF analysis. Which is displayed in Figure 1 below.
 
 <figure>
-  <img src="{{ '/assets/images/assignment1/distinctive_words_top15.png' | relative_url }}" alt="Top 15 distinctive words by period">
+  <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
+    <img src="{{ '/assets/images/assignment1/distinctive_words_top15.png' | relative_url }}" alt="Top 15 distinctive words by period">
+    <span>Click to maximize</span>
+  </button>
   <figcaption>Figure 1. Top 15 distinctive words before, during, and after World War II.</figcaption>
 </figure>
 
@@ -81,17 +84,17 @@ As it can be seen in this figure, there is some prevalence of space related word
 When increasing the scope beyond the top 15 words, we notice that there are some words that start being more apparent that others. Take a look into figure 2.
 
 <figure>
-  <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-2-lightbox">
+  <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
     <img src="{{ '/assets/images/assignment1/distinctive_words_top100.png' | relative_url }}" alt="Top 100 distinctive words by period">
     <span>Click to maximize</span>
   </button>
   <figcaption>Figure 2. Top 100 distinctive words before, during, and after World War II.</figcaption>
 </figure>
 
-<div class="figure-lightbox" id="figure-2-lightbox" role="dialog" aria-modal="true" aria-labelledby="figure-2-lightbox-title" hidden>
+<div class="figure-lightbox" id="figure-lightbox" role="dialog" aria-modal="true" aria-labelledby="figure-lightbox-title" hidden>
   <div class="figure-lightbox__content">
-    <button class="figure-lightbox__close" type="button" aria-label="Close maximized Figure 2">&times;</button>
-    <h2 id="figure-2-lightbox-title">Figure 2. Top 100 distinctive words</h2>
+    <button class="figure-lightbox__close" type="button" aria-label="Close maximized figure">&times;</button>
+    <h2 id="figure-lightbox-title"></h2>
     <div class="figure-lightbox__controls" aria-label="Figure zoom controls">
       <button type="button" class="figure-lightbox__zoom-out" aria-label="Zoom out">−</button>
       <span class="figure-lightbox__zoom-level">100%</span>
@@ -99,7 +102,7 @@ When increasing the scope beyond the top 15 words, we notice that there are some
       <button type="button" class="figure-lightbox__zoom-reset">Reset</button>
     </div>
     <div class="figure-lightbox__viewport">
-      <img class="figure-lightbox__image" src="{{ '/assets/images/assignment1/distinctive_words_top100.png' | relative_url }}" alt="Top 100 distinctive words by period">
+      <img class="figure-lightbox__image" src="" alt="">
     </div>
   </div>
 </div>
@@ -221,11 +224,13 @@ When increasing the scope beyond the top 15 words, we notice that there are some
 
 <script>
   (function () {
-    const trigger = document.querySelector('.figure-zoom-trigger');
-    const lightbox = document.getElementById('figure-2-lightbox');
+    const triggers = document.querySelectorAll('.figure-zoom-trigger');
+    const lightbox = document.getElementById('figure-lightbox');
     const closeButton = lightbox.querySelector('.figure-lightbox__close');
+    const title = lightbox.querySelector('#figure-lightbox-title');
     const image = lightbox.querySelector('.figure-lightbox__image');
     const zoomLevel = lightbox.querySelector('.figure-lightbox__zoom-level');
+    let activeTrigger;
     let zoom = 1;
 
     function updateZoom() {
@@ -236,15 +241,24 @@ When increasing the scope beyond the top 15 words, we notice that there are some
     function closeLightbox() {
       lightbox.hidden = true;
       document.body.classList.remove('figure-lightbox-open');
-      trigger.focus();
+      activeTrigger.focus();
     }
 
-    trigger.addEventListener('click', function () {
-      lightbox.hidden = false;
-      document.body.classList.add('figure-lightbox-open');
-      zoom = 1;
-      updateZoom();
-      closeButton.focus();
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        const sourceImage = trigger.querySelector('img');
+        const caption = trigger.parentElement.querySelector('figcaption').textContent;
+
+        activeTrigger = trigger;
+        image.src = sourceImage.src;
+        image.alt = sourceImage.alt;
+        title.textContent = caption;
+        lightbox.hidden = false;
+        document.body.classList.add('figure-lightbox-open');
+        zoom = 1;
+        updateZoom();
+        closeButton.focus();
+      });
     });
 
     image.addEventListener('load', updateZoom);
@@ -283,7 +297,10 @@ It might be natural that the writers felt more inclined to write towards ideas o
 The five tags that are available in the science fiction corpus are: action, mars, society, space travel and war. Although, we were not sure of the frequencies during the time periods we set in, so we made an analysis of the tag frequencies, as it can be seen in the following picture
 
 <figure>
-  <img src="{{ '/assets/images/assignment1/tag_comparison_before_during_after_ww2.png' | relative_url }}" alt="Comparison of thematic tags before, during, and after World War II">
+  <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
+    <img src="{{ '/assets/images/assignment1/tag_comparison_before_during_after_ww2.png' | relative_url }}" alt="Comparison of thematic tags before, during, and after World War II">
+    <span>Click to maximize</span>
+  </button>
   <figcaption>Figure 3. Thematic-tag comparison before, during, and after World War II.</figcaption>
 </figure>
 
@@ -294,6 +311,9 @@ It can be noticed that, before WW2, there was still some interest in themes of a
 During our analysis for the top 100 words, we became curious as to why Tarzan was appearing so consistently. So we
 
 <figure>
-  <img src="{{ '/assets/images/assignment1/average_length_before_during_after_ww2.png' | relative_url }}" alt="Average book length before, during, and after World War II">
+  <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
+    <img src="{{ '/assets/images/assignment1/average_length_before_during_after_ww2.png' | relative_url }}" alt="Average book length before, during, and after World War II">
+    <span>Click to maximize</span>
+  </button>
   <figcaption>Figure 4. Average book length before, during, and after World War II.</figcaption>
 </figure>
