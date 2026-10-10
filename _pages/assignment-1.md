@@ -385,3 +385,5 @@ After all, we are doing distant reading. We are not really engaging with the con
 We could have taken a closer look at each of the books that were outliers and analyzed them to reach different conclusions. For example, we could have used the “Most Distinctive Words” method, which was taught to us in class. With this method, we would take a set of different books and analyze what kinds of correlations there are between words. However, given the time Saeed and I had, we could not do this during our analysis.
 
 Not only that, but we could also have provided some quotes from the books to give an idea of how frequently interesting words such as “earth,” “Tarzan,” and “Mercurians” appeared.
+
+READY FOR GRADING
