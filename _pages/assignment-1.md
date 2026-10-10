@@ -5,6 +5,22 @@ title: "Assignment 1"
 
 _Use of A.I. Disclosure: We used Claude Code and Copilot to write the logic for the data analysis. We made sure that it outputs what we need in accordance to what we were seeking for._
 
+## Table of Contents
+
+- [Introduction](#introduction)
+  - [What we were looking for?](#what-we-were-looking-for)
+  - [Hypothesis](#hypothesis)
+  - [The method](#the-method)
+    - [Distinctive vocabulary using TF-IDF](#distinctive-vocabulary-using-tf-idf)
+    - [Thematic-tag comparison](#thematic-tag-comparison)
+    - [Book length](#book-length)
+    - [Book-level scatter plot](#book-level-scatter-plot)
+- [Performing the analysis](#performing-the-analysis)
+  - [Top 15 words](#top-15-words)
+  - [Top 100 words](#top-100-words)
+  - [Looking at tags](#looking-at-tags)
+  - [Average length](#average-length)
+
 # Introduction
 
 ### What we were looking for?
