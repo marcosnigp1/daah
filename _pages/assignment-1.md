@@ -25,6 +25,8 @@ _Use of A.I. Disclosure: We used Claude Code and Copilot to write the logic for 
 
 # Introduction
 
+---
+
 ### What we were looking for?
 
 During the discussion we had, we noticed that Saeed Syed and me were really interested in checking if there was some kind of words related to space and their rate of frequency before, during (which was during 1939 to 1945) and after World War 2.
@@ -60,6 +62,8 @@ As mentioned in the previous method, there was an outlier that we needed to iden
 ---
 
 # Performing the analysis
+
+---
 
 ### a. Top 15 words
 
