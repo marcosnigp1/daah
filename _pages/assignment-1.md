@@ -3,109 +3,7 @@ permalink: /assignment-1/
 title: "Assignment 1"
 ---
 
-_Use of A.I. Disclosure: We used Claude Code and Copilot to write the logic for the data analysis. We made sure that it outputs what we need in accordance to what we were seeking for._
-
-## Table of Contents
-
-- [Introduction](#introduction)
-  - [What we were looking for?](#what-we-were-looking-for)
-  - [Hypothesis](#hypothesis)
-  - [The method](#the-method)
-    - [a. Distinctive vocabulary using TF-IDF](#a-distinctive-vocabulary-using-tf-idf)
-    - [b. Thematic-tag comparison](#b-thematic-tag-comparison)
-    - [c. Book length](#c-book-length)
-    - [d. Book-level scatter plot](#d-book-level-scatter-plot)
-- [Performing the analysis](#performing-the-analysis)
-  - [a. Top 15 words](#a-top-15-words)
-  - [b. Top 100 words](#b-top-100-words)
-  - [c. Looking at tags](#c-looking-at-tags)
-  - [d. Average length](#d-average-length)
-
----
-
-# Introduction
-
----
-
-### What we were looking for?
-
-During the discussion we had, we noticed that Saeed Syed and me were really interested in checking if there was some kind of words related to space and their rate of frequency before, during (which was during 1939 to 1945) and after World War 2.
-
-According to the reading by David Seed: _Science Fiction: A Very Short Introduction_ after World War 2 (34) there was a interest in exploring themes of alien invansions, with the whole ideas of "conquer or be conquered." There can be interesting facts about it, or some words that appear to be more frequent during specific times, but it is something we will be exploring during the course of this analysis.
-
-### Hypothesis
-
-Books written in the WW2 era will have more words related to science fiction as well as possess the war tag more than the rest in the science fiction corpus.
-
-### The method
-
-In order to analyze this, we used the following techniques, with the reasoning as to why we choose them:
-
-#### a. Distinctive vocabulary using TF-IDF
-
-The first analytical method deployed during our analysis was the TF-IDF, or short term for _term frequency-inverse document frequency_. This is a used to identify words that are especially characteristic of one group compared with other groups. In this case, we are tokenizing each book into individual words, removing any kind of punctuation, numbers, and common English stop words; all the books written in the corpus seem to be in English.
-
-After tokenizing, the words frequencies are then counted within each book. After that, the books are grouped into the three historical periods as well as we specifically remove the words appearing in fewer than five different texts, in order to get a better sample size.
-
-#### b. Thematic-tag comparison
-
-During our analysis, we also wanted to see what kind of themes were more prevalent during the time periods.
-
-#### c. Book length
-
-During our analysis, we also found necessary later on to determine how long each book was during periods, as there could be some data that would be possible to theorize if we determine the book length. For example, during our analysis we found an outlier and we needed to determine why this outlier existed.
-
-#### d. Book-level scatter plot
-
-As mentioned in the previous method, there was an outlier that we needed to identify, and for this, we resorted to a scatter plot from books that were published before World War II. As we were comparing the data, we were noticing certain patterns that did not make much sense.
-
----
-
-# Performing the analysis
-
----
-
-### a. Top 15 words
-
-The first step we made was to look for the first top 15 words that are the less frequent using the TF-IDF analysis. Which is displayed in Figure 1 below.
-
-<figure>
-  <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
-    <img src="{{ '/assets/images/assignment1/distinctive_words_top15.png' | relative_url }}" alt="Top 15 distinctive words by period">
-    <span>Click to maximize</span>
-  </button>
-  <figcaption>Figure 1. Top 15 distinctive words before, during, and after World War II.</figcaption>
-</figure>
-
-As it can be seen in this figure, there is some prevalence of space related words during WW2, for example, words such as "Blaster," "Terran," "Spacer" can be seen. Before and after seem to show a bigger prevalence of unique words related to people's name. However, "fbi" can be seen in the "After WW2" section, suggesting there could be some themes of espionage in later books. I mainly say this given that in the book by _Science Fiction: A Very Short Introduction_ it was seems that there is some books that mention the CIA and FBI, such as Walter Tevis's _The Man Who Fell to Earth_ (1963). This book is not available in this science fiction corpus, but it is to mainly give you an idea.
-
-### b. Top 100 words
-
-When increasing the scope beyond the top 15 words, we notice that there are some words that start being more apparent that others. Take a look into figure 2.
-
-<figure>
-  <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
-    <img src="{{ '/assets/images/assignment1/distinctive_words_top100.png' | relative_url }}" alt="Top 100 distinctive words by period">
-    <span>Click to maximize</span>
-  </button>
-  <figcaption>Figure 2. Top 100 distinctive words before, during, and after World War II.</figcaption>
-</figure>
-
-<div class="figure-lightbox" id="figure-lightbox" role="dialog" aria-modal="true" aria-labelledby="figure-lightbox-title" hidden>
-  <div class="figure-lightbox__content">
-    <button class="figure-lightbox__close" type="button" aria-label="Close maximized figure">&times;</button>
-    <h2 id="figure-lightbox-title"></h2>
-    <div class="figure-lightbox__controls" aria-label="Figure zoom controls">
-      <button type="button" class="figure-lightbox__zoom-out" aria-label="Zoom out">−</button>
-      <span class="figure-lightbox__zoom-level">100%</span>
-      <button type="button" class="figure-lightbox__zoom-in" aria-label="Zoom in">+</button>
-      <button type="button" class="figure-lightbox__zoom-reset">Reset</button>
-    </div>
-    <div class="figure-lightbox__viewport">
-      <img class="figure-lightbox__image" src="" alt="">
-    </div>
-  </div>
-</div>
+<!-- Scripts and stuff -->
 
 <style>
   .figure-zoom-trigger {
@@ -223,7 +121,7 @@ When increasing the scope beyond the top 15 words, we notice that there are some
 </style>
 
 <script>
-  (function () {
+  document.addEventListener('DOMContentLoaded', function () {
     const triggers = document.querySelectorAll('.figure-zoom-trigger');
     const lightbox = document.getElementById('figure-lightbox');
     const closeButton = lightbox.querySelector('.figure-lightbox__close');
@@ -285,8 +183,114 @@ When increasing the scope beyond the top 15 words, we notice that there are some
         closeLightbox();
       }
     });
-  }());
+  });
 </script>
+
+<!-- END OF THAT -->
+
+_Use of A.I. Disclosure: We used Claude Code and Copilot to write the logic for the data analysis. We made sure that it outputs what we need in accordance to what we were seeking for._
+
+## Table of Contents
+
+- [Introduction](#introduction)
+  - [What we were looking for?](#what-we-were-looking-for)
+  - [Hypothesis](#hypothesis)
+  - [The method](#the-method)
+    - [a. Distinctive vocabulary using TF-IDF](#a-distinctive-vocabulary-using-tf-idf)
+    - [b. Thematic-tag comparison](#b-thematic-tag-comparison)
+    - [c. Book length](#c-book-length)
+    - [d. Book-level scatter plot](#d-book-level-scatter-plot)
+- [Performing the analysis](#performing-the-analysis)
+  - [a. Top 15 words](#a-top-15-words)
+  - [b. Top 100 words](#b-top-100-words)
+  - [c. Looking at tags](#c-looking-at-tags)
+  - [d. Average length](#d-average-length)
+
+---
+
+# Introduction
+
+---
+
+### What we were looking for?
+
+During the discussion we had, we noticed that Saeed Syed and me were really interested in checking if there was some kind of words related to space and their rate of frequency before, during (which was during 1939 to 1945) and after World War 2.
+
+According to the reading by David Seed: _Science Fiction: A Very Short Introduction_ after World War 2 (34) there was a interest in exploring themes of alien invansions, with the whole ideas of "conquer or be conquered." There can be interesting facts about it, or some words that appear to be more frequent during specific times, but it is something we will be exploring during the course of this analysis.
+
+### Hypothesis
+
+Books written in the WW2 era will have more words related to science fiction as well as possess the war tag more than the rest in the science fiction corpus.
+
+### The method
+
+In order to analyze this, we used the following techniques, with the reasoning as to why we choose them:
+
+#### a. Distinctive vocabulary using TF-IDF
+
+The first analytical method deployed during our analysis was the TF-IDF, or short term for _term frequency-inverse document frequency_. This is a used to identify words that are especially characteristic of one group compared with other groups. In this case, we are tokenizing each book into individual words, removing any kind of punctuation, numbers, and common English stop words; all the books written in the corpus seem to be in English.
+
+After tokenizing, the words frequencies are then counted within each book. After that, the books are grouped into the three historical periods as well as we specifically remove the words appearing in fewer than five different texts, in order to get a better sample size.
+
+#### b. Thematic-tag comparison
+
+During our analysis, we also wanted to see what kind of themes were more prevalent during the time periods.
+
+#### c. Book length
+
+During our analysis, we also found necessary later on to determine how long each book was during periods, as there could be some data that would be possible to theorize if we determine the book length. For example, during our analysis we found an outlier and we needed to determine why this outlier existed.
+
+#### d. Book-level scatter plot
+
+As mentioned in the previous method, there was an outlier that we needed to identify, and for this, we resorted to a scatter plot from books that were published before World War II. As we were comparing the data, we were noticing certain patterns that did not make much sense.
+
+---
+
+# Performing the analysis
+
+---
+
+### a. Top 15 words
+
+The first step we made was to look for the first top 15 words that are the less frequent using the TF-IDF analysis. Which is displayed in Figure 1 below.
+
+<figure>
+  <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
+    <img src="{{ '/assets/images/assignment1/distinctive_words_top15.png' | relative_url }}" alt="Top 15 distinctive words by period">
+    <span>Click to maximize</span>
+  </button>
+  <figcaption>Figure 1. Top 15 distinctive words before, during, and after World War II.</figcaption>
+</figure>
+
+As it can be seen in this figure, there is some prevalence of space related words during WW2, for example, words such as "Blaster," "Terran," "Spacer" can be seen. Before and after seem to show a bigger prevalence of unique words related to people's name. However, "fbi" can be seen in the "After WW2" section, suggesting there could be some themes of espionage in later books. I mainly say this given that in the book by _Science Fiction: A Very Short Introduction_ it was seems that there is some books that mention the CIA and FBI, such as Walter Tevis's _The Man Who Fell to Earth_ (1963). This book is not available in this science fiction corpus, but it is to mainly give you an idea.
+
+### b. Top 100 words
+
+When increasing the scope beyond the top 15 words, we notice that there are some words that start being more apparent that others. Take a look into figure 2.
+
+<figure>
+  <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
+    <img src="{{ '/assets/images/assignment1/distinctive_words_top100.png' | relative_url }}" alt="Top 100 distinctive words by period">
+    <span>Click to maximize</span>
+  </button>
+  <figcaption>Figure 2. Top 100 distinctive words before, during, and after World War II.</figcaption>
+</figure>
+
+<div class="figure-lightbox" id="figure-lightbox" role="dialog" aria-modal="true" aria-labelledby="figure-lightbox-title" hidden>
+  <div class="figure-lightbox__content">
+    <button class="figure-lightbox__close" type="button" aria-label="Close maximized figure">&times;</button>
+    <h2 id="figure-lightbox-title"></h2>
+    <div class="figure-lightbox__controls" aria-label="Figure zoom controls">
+      <button type="button" class="figure-lightbox__zoom-out" aria-label="Zoom out">−</button>
+      <span class="figure-lightbox__zoom-level">100%</span>
+      <button type="button" class="figure-lightbox__zoom-in" aria-label="Zoom in">+</button>
+      <button type="button" class="figure-lightbox__zoom-reset">Reset</button>
+    </div>
+    <div class="figure-lightbox__viewport">
+      <img class="figure-lightbox__image" src="" alt="">
+    </div>
+  </div>
+</div>
 
 Here, if we look into the new words that popped during World War 2, we notice that there are words such as "mercurians," "spacemen," "spaceships," "spacecraft." Words that are also related to themes of science fiction and space can be seen on the list of words from after World War 2. Such as "contragravity," "computers," "starship," "spaceport."
 
