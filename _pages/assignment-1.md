@@ -6,6 +6,10 @@ title: "Assignment 1"
 <!-- Scripts and stuff -->
 
 <style>
+  .layout--single .page__content {
+    max-width: 1100px;
+  }
+
   .figure-zoom-trigger {
     position: relative;
     display: block;
@@ -346,7 +350,7 @@ During our analysis of the top distinctive words, we became curious about why â€
   <figcaption>Figure 5. Average book length before, during, and after World War II.</figcaption>
 </figure>
 
-We became suspicious of this, but after creating a scatter plot that took into account the word counts and publication years of books published before World War II, we noticed that the extreme outlier, The Outline of History, did not seem to have anything to do with Tarzan. Instead, there was a book with Tarzan in its title: _Tarzan the Untamed_. This was making the data appear strange.
+We became suspicious of this, but after creating a scatter plot that took into account the word counts and publication years of books published before World War II, we noticed that the extreme outlier, _The Outline of History_, did not seem to have anything to do with Tarzan. Instead, there was a book with Tarzan in its title: _Tarzan the Untamed_. This was making the data appear strange.
 
 <figure>
   <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">

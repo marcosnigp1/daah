@@ -33,7 +33,7 @@ We also investigated why “Tarzan” appeared so frequently in the results. Com
 
 ## Methods
 
-The assignment combines:
+We used the following methods:
 
 - Frequent words per 1,000 words
 - TF-IDF comparison of distinctive vocabulary
