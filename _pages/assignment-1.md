@@ -188,7 +188,7 @@ title: "Assignment 1"
 
 <!-- END OF THAT -->
 
-_Use of A.I. Disclosure: We used Claude Code and Copilot to write the logic for the data analysis. We made sure that it outputs what we need in accordance to what we were seeking for._
+_Use of A.I. Disclosure and how did we work together: We used Claude Code and Copilot to write the logic for the data analysis. We made sure that it outputs what we need in accordance to what we were seeking for. As for the individual assignments, we made the data analysis process together, but we wrote the essays independently._
 
 ## Table of Contents
 
@@ -214,35 +214,35 @@ _Use of A.I. Disclosure: We used Claude Code and Copilot to write the logic for 
 
 ### What we were looking for?
 
-During the discussion we had, we noticed that Saeed Syed and me were really interested in checking if there was some kind of words related to space and their rate of frequency before, during (which was during 1939 to 1945) and after World War 2.
+During the discussion we had, we noticed that Saeed Syed and I were really interested in checking whether there were words related to space and how frequently they appeared before, during (1939 to 1945), and after World War II.
 
-According to the reading by David Seed: _Science Fiction: A Very Short Introduction_ after World War 2 (34) there was a interest in exploring themes of alien invansions, with the whole ideas of "conquer or be conquered." There can be interesting facts about it, or some words that appear to be more frequent during specific times, but it is something we will be exploring during the course of this analysis.
+According to David Seed’s _Science Fiction: A Very Short Introduction_, after World War II there was an interest in exploring themes of alien invasions, including the idea of “conquer or be conquered” (34). There could be interesting findings about this, or words that appear more frequently during specific periods, which is something we will explore during this analysis.
 
 ### Hypothesis
 
-Books written in the WW2 era will have more words related to science fiction as well as possess the war tag more than the rest in the science fiction corpus.
+Books written during the WW2 era will have more words related to science fiction and will be more likely to possess the war tag than the rest of the science fiction corpus.
 
 ### The method
 
-In order to analyze this, we used the following techniques, with the reasoning as to why we choose them:
+In order to analyze this, we used the following techniques. We also explain why we chose them.
 
 #### a. Distinctive vocabulary using TF-IDF
 
-The first analytical method deployed during our analysis was the TF-IDF, or short term for _term frequency-inverse document frequency_. This is a used to identify words that are especially characteristic of one group compared with other groups. In this case, we are tokenizing each book into individual words, removing any kind of punctuation, numbers, and common English stop words; all the books written in the corpus seem to be in English.
+The first analytical method we used was TF-IDF, short for _term frequency-inverse document frequency_. This method is used to identify words that are especially characteristic of one group compared with other groups. In this case, we tokenized each book into individual words, removing punctuation, numbers, and common English stop words. All the books in the corpus seem to be in English.
 
-After tokenizing, the words frequencies are then counted within each book. After that, the books are grouped into the three historical periods as well as we specifically remove the words appearing in fewer than five different texts, in order to get a better sample size.
+After tokenizing, we counted the word frequencies within each book. We then grouped the books into the three historical periods and removed words appearing in fewer than five different texts in order to get a better sample size.
 
 #### b. Thematic-tag comparison
 
-During our analysis, we also wanted to see what kind of themes were more prevalent during the time periods.
+During our analysis, we also wanted to see what kinds of themes were more prevalent during the different time periods.
 
 #### c. Book length
 
-During our analysis, we also found necessary later on to determine how long each book was during periods, as there could be some data that would be possible to theorize if we determine the book length. For example, during our analysis we found an outlier and we needed to determine why this outlier existed.
+During our analysis, we later found it necessary to determine how long each book was in the different periods, as this could help us theorize about the data. For example, we found an outlier and needed to determine why it existed.
 
 #### d. Book-level scatter plot
 
-As mentioned in the previous method, there was an outlier that we needed to identify, and for this, we resorted to a scatter plot from books that were published before World War II. As we were comparing the data, we were noticing certain patterns that did not make much sense.
+As mentioned in the previous method, there was an outlier that we needed to identify. For this, we used a scatter plot of books published before World War II. As we compared the data, we noticed certain patterns that did not make much sense.
 
 ---
 
@@ -252,7 +252,7 @@ As mentioned in the previous method, there was an outlier that we needed to iden
 
 ### a. Top 15 words
 
-The first step we made was to look for the first top 15 words that are the less frequent using the TF-IDF analysis. Which is displayed in Figure 1 below.
+The first step we took was to look at the top 15 most distinctive words using TF-IDF analysis. These are displayed in Figure 1 below.
 
 <figure>
   <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
@@ -262,11 +262,11 @@ The first step we made was to look for the first top 15 words that are the less 
   <figcaption>Figure 1. Top 15 distinctive words before, during, and after World War II.</figcaption>
 </figure>
 
-As it can be seen in this figure, there is some prevalence of space related words during WW2, for example, words such as "Blaster," "Terran," "Spacer" can be seen. Before and after seem to show a bigger prevalence of unique words related to people's name. However, "fbi" can be seen in the "After WW2" section, suggesting there could be some themes of espionage in later books. I mainly say this given that in the book by _Science Fiction: A Very Short Introduction_ it was seems that there is some books that mention the CIA and FBI, such as Walter Tevis's _The Man Who Fell to Earth_ (1963). This book is not available in this science fiction corpus, but it is to mainly give you an idea.
+As can be seen in this figure, there is some prevalence of space-related words during WW2. For example, words such as “blaster,” “Terran,” and “spacer” can be seen. The periods before and after the war seem to show a greater prevalence of distinctive words related to people’s names. However, “FBI” can be seen in the “After WW2” section, suggesting that there could be themes of espionage in later books. I mainly say this because _Science Fiction: A Very Short Introduction_ discusses books that mention the CIA and FBI, such as Walter Tevis’s _The Man Who Fell to Earth_ (1963). This book is not available in our science fiction corpus, but I mention it mainly to give you an idea.
 
 ### b. Top 100 words
 
-When increasing the scope beyond the top 15 words, we notice that there are some words that start being more apparent that others. Take a look into figure 2.
+When increasing the scope beyond the top 15 words, we noticed that some words became more apparent than others. Take a look at Figure 2.
 
 <figure>
   <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
@@ -292,13 +292,13 @@ When increasing the scope beyond the top 15 words, we notice that there are some
   </div>
 </div>
 
-Here, if we look into the new words that popped during World War 2, we notice that there are words such as "mercurians," "spacemen," "spaceships," "spacecraft." Words that are also related to themes of science fiction and space can be seen on the list of words from after World War 2. Such as "contragravity," "computers," "starship," "spaceport."
+If we look at the new words that appeared during World War II, we notice words such as “Mercurians,” “spacemen,” “spaceships,” and “spacecraft.” Words related to science fiction and space can also be seen on the list of words from after World War II, such as “contragravity,” “computers,” “starship,” and “spaceport.”
 
-It might be natural that the writers felt more inclined to write towards ideas of very advanced spaceships that go through space given the technological development of the time, as well as the increase sight seeing of planes during the time of war as well as computational advances. However, when we were looking at the results from here, the name "Tarzan" popping out many times and as frequent as it was, it made us make some tests to see if our code for analysis was inherently broken, as we did not know why Tarzan, which we associate with Disney's version of Tarzan, recognizing that it is inspired by a book, was appearing as much.
+It might be natural that writers felt more inclined to write about ideas of very advanced spaceships traveling through space, given the technological developments of the time, the increased visibility of planes during the war, and advances in computing. However, when we looked at the results, the name “Tarzan” appeared many times. Because it appeared so frequently, we ran some tests to see whether our code for the analysis was broken. We did not know why Tarzan, whom we associate with Disney’s version of the character, although we recognize that it was inspired by a book, was appearing so much.
 
 ### c. Looking at tags
 
-The five tags that are available in the science fiction corpus are: action, mars, society, space travel and war. Although, we were not sure of the frequencies during the time periods we set in, so we made an analysis of the tag frequencies, as it can be seen in the following picture
+The five tags available in the science fiction corpus are action, Mars, society, space travel, and war. However, we were not sure how frequently they appeared during the time periods we had set, so we analyzed the tag frequencies, as can be seen in the following picture.
 
 <figure>
   <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
@@ -308,11 +308,11 @@ The five tags that are available in the science fiction corpus are: action, mars
   <figcaption>Figure 3. Thematic-tag comparison before, during, and after World War II.</figcaption>
 </figure>
 
-It can be noticed that, before WW2, there was still some interest in themes of action (78%) and war (47.2%). However, when it came to space travel, there was no much interest, since it was around a 23.6%, compared to during WW2 when it increased to a 81.4% and after WW2 which lowered to a 59.4%. This again, could correlate to the possibility of writers being fascinated by the technological advacenments of the time.
+It can be noticed that, before WW2, there was still some interest in themes of action (78%) and war (47.2%). However, when it came to space travel, there was not as much interest, since the figure was around 23.6%. This increased to 81.4% during WW2 and then lowered to 59.4% after WW2. Again, this could be related to the possibility of writers being fascinated by the technological advancements of the time.
 
-### d. Average length
+### d. Average length and scatter plot to determine what is happening with "Tarzan"
 
-During our analysis for the top 100 words, we became curious as to why Tarzan was appearing so consistently. So we
+During our analysis of the top distinctive words, we became curious about why “Tarzan” appeared so consistently. For example, before the cleanup, Tarzan appeared a lot in our data analysis! This did not make much sense to us, so we ran some code to estimate what was happening with the name and why it was so frequent. We imagined that someone might have written a long book that mentioned Tarzan many times, as can be seen in the following figure.
 
 <figure>
   <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox">
@@ -321,3 +321,15 @@ During our analysis for the top 100 words, we became curious as to why Tarzan wa
   </button>
   <figcaption>Figure 4. Average book length before, during, and after World War II.</figcaption>
 </figure>
+
+We became suspicious of this, but after creating a scatter plot that took into account the word counts and publication years of books published before World War II, we noticed that the extreme outlier, The Outline of History, did not seem to have anything to do with Tarzan. Instead, there was a book with Tarzan in its title: _Tarzan the Untamed_. This was making the data appear strange.
+
+assets\images\assignment1\book_length_scatter_before_ww2.png
+
+We could _not_ ignore the elephant in the room by skipping this detail.
+
+---
+
+# Summary of our findings
+
+---
