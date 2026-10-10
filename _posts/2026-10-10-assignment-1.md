@@ -11,6 +11,8 @@ tags:
 excerpt: "An exploratory analysis of distinctive vocabulary, thematic tags, and book length in a science fiction corpus."
 ---
 
+_Note: This was written with help of Generative A.I. (GitHub Copilot) as a summary of Assignment #1._
+
 For Assignment 1, we used distant-reading methods to explore how science fiction writing changed before, during, and after World War II. Our main question was whether the World War II period was associated with a stronger interest in science-fiction themes, especially space and war.
 
 ## What we investigated
