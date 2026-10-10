@@ -45,14 +45,42 @@ As mentioned in the previous method, there was an outlier that we needed to iden
 
 The first step we made was to look for the first top 15 words that are the less frequent using the TF-IDF analysis. Which is displayed in Figure 1 below.
 
-As it can be seen in this figure, there is some prevalence of space related words during WW2, for example, words such as "Blaster," "Terran," "Spacer" can be seen. Before and after seem to show a bigger prevalence of unique words related to people's name. However, "fbi" can be seen in the "After WW2" section, suggesting there could be some themes of espionage in later books. I mainly say this given that in the book by _Science Fiction: A Very Short Introduction_ it was seems that there is some books that mention the CIA and FBI, such as Walter Tevis's _The Man Who Fell to Earth_ (1963). This book is not available in this corpus, but it is to mainly give you an idea.
+<figure>
+  <img src="{{ '/assets/images/assignment1/distinctive_words_top15.png' | relative_url }}" alt="Top 15 distinctive words by period">
+  <figcaption>Figure 1. Top 15 distinctive words before, during, and after World War II.</figcaption>
+</figure>
+
+As it can be seen in this figure, there is some prevalence of space related words during WW2, for example, words such as "Blaster," "Terran," "Spacer" can be seen. Before and after seem to show a bigger prevalence of unique words related to people's name. However, "fbi" can be seen in the "After WW2" section, suggesting there could be some themes of espionage in later books. I mainly say this given that in the book by _Science Fiction: A Very Short Introduction_ it was seems that there is some books that mention the CIA and FBI, such as Walter Tevis's _The Man Who Fell to Earth_ (1963). This book is not available in this science fiction corpus, but it is to mainly give you an idea.
 
 ### Top 100 words
 
 When increasing the scope beyond the top 15 words, we notice that there are some words that start being more apparent that others. Take a look into figure 2.
+
+<figure>
+  <img src="{{ '/assets/images/assignment1/distinctive_words_top100.png' | relative_url }}" alt="Top 100 distinctive words by period">
+  <figcaption>Figure 2. Top 100 distinctive words before, during, and after World War II.</figcaption>
+</figure>
 
 Here, if we look into the new words that popped during World War 2, we notice that there are words such as "mercurians," "spacemen," "spaceships," "spacecraft." Words that are also related to themes of science fiction and space can be seen on the list of words from after World War 2. Such as "contragravity," "computers," "starship," "spaceport."
 
 It might be natural that the writers felt more inclined to write towards ideas of very advanced spaceships that go through space given the technological development of the time, as well as the increase sight seeing of planes during the time of war as well as computational advances. However, when we were looking at the results from here, the name "Tarzan" popping out many times and as frequent as it was, it made us make some tests to see if our code for analysis was inherently broken, as we did not know why Tarzan, which we associate with Disney's version of Tarzan, recognizing that it is inspired by a book, was appearing as much.
 
 ### Looking at tags
+
+The five tags that are available in the science fiction corpus are: action, mars, society, space travel and war. Although, we were not sure of the frequencies during the time periods we set in, so we made an analysis of the tag frequencies, as it can be seen in the following picture
+
+<figure>
+  <img src="{{ '/assets/images/assignment1/tag_comparison_before_during_after_ww2.png' | relative_url }}" alt="Comparison of thematic tags before, during, and after World War II">
+  <figcaption>Figure 3. Thematic-tag comparison before, during, and after World War II.</figcaption>
+</figure>
+
+It can be noticed that, before WW2, there was still some interest in themes of action (78%) and war (47.2%). However, when it came to space travel, there was no much interest, since it was around a 23.6%, compared to during WW2 when it increased to a 81.4% and after WW2 which lowered to a 59.4%. This again, could correlate to the possibility of writers being fascinated by the technological advacenments of the time.
+
+### Average length
+
+During our analysis for the top 100 words, we became curious as to why Tarzan was appearing so consistently. So we
+
+<figure>
+  <img src="{{ '/assets/images/assignment1/average_length_before_during_after_ww2.png' | relative_url }}" alt="Average book length before, during, and after World War II">
+  <figcaption>Figure 4. Average book length before, during, and after World War II.</figcaption>
+</figure>
