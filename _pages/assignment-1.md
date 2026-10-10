@@ -6,8 +6,17 @@ title: "Assignment 1"
 <!-- Scripts and stuff -->
 
 <style>
+  .layout--single .page {
+    width: min(900px, calc(100% - 2rem));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    float: none;
+  }
+
+  .layout--single .page__inner-wrap,
   .layout--single .page__content {
-    max-width: 1100px;
+    max-width: none;
   }
 
   .figure-zoom-trigger {
