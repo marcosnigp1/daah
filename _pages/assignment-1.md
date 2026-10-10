@@ -214,7 +214,7 @@ _Use of A.I. Disclosure and how did we work together: We used Claude Code and Co
 
 ### What we were looking for?
 
-During the discussion we had, we noticed that Saeed Syed and I were really interested in checking whether there were words related to space and how frequently they appeared before, during (1939 to 1945), and after World War II.
+During the discussion we had, we noticed that Saeed Syed and I were really interested in checking whether there were words related to space and how frequently they appeared before, during (1939 to 1945), and after World War II (WW2).
 
 According to David Seed’s _Science Fiction: A Very Short Introduction_, after World War II there was an interest in exploring themes of alien invasions, including the idea of “conquer or be conquered” (34). There could be interesting findings about this, or words that appear more frequently during specific periods, which is something we will explore during this analysis.
 
@@ -333,3 +333,23 @@ We could _not_ ignore the elephant in the room by skipping this detail.
 # Summary of our findings
 
 ---
+
+After doing this analysis, we noticed that the periods during and after World War II did show a significant interest in space. New distinctive words appeared, and the space-related tags became more frequent. As of right now, there is not much we can hypothesize beyond showing that there was an increased interest in these themes. During our discussion, we considered the idea that this could have been because of rapid technological developments. We also wondered whether people were tired of conflicts in the real world and wanted to explore what lay beyond Earth. These are just possible explanations, so they have to be taken with a grain of salt.
+
+In summary, there was an increased interest in space, extraterrestrials, and other planets, especially during World War II. There was also an interest in war-themed books, which surprisingly dropped after World War II.
+
+---
+
+# Conclusion
+
+---
+
+### What our hypothesis correct?
+
+To a degree, it is. However, we cannot safely draw that conclusion, given the exploratory nature of this exercise. As of now, our analysis points toward writers being really interested in exploring themes of space. Look especially at how quickly the space travel tag became more frequent in the figure showing tag frequencies by period. As to why this happened, we cannot safely say. There could have been multiple reasons, and they may have varied from writer to writer.
+
+After all, we are doing distant reading. We are not really engaging with the contents of the books themselves, as reading them all would take us years within a realistic reading schedule. That is where the magic of distant reading lies, though: we can get an idea of what the books are about without spending years of our lives reading them.
+
+### What can we improve?
+
+We could have taken a closer look at each of the books that were outliers and analyzed them to reach different conclusions. For example, we could have used the “Most Distinctive Words” method, which was taught to us in class. With this method, we would take a set of different books and analyze what kinds of correlations there are between words. However, given the time Saeed and I had, we could not do this during our analysis.
