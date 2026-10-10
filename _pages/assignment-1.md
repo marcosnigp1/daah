@@ -92,7 +92,15 @@ When increasing the scope beyond the top 15 words, we notice that there are some
   <div class="figure-lightbox__content">
     <button class="figure-lightbox__close" type="button" aria-label="Close maximized Figure 2">&times;</button>
     <h2 id="figure-2-lightbox-title">Figure 2. Top 100 distinctive words</h2>
-    <img src="{{ '/assets/images/assignment1/distinctive_words_top100.png' | relative_url }}" alt="Top 100 distinctive words by period">
+    <div class="figure-lightbox__controls" aria-label="Figure zoom controls">
+      <button type="button" class="figure-lightbox__zoom-out" aria-label="Zoom out">−</button>
+      <span class="figure-lightbox__zoom-level">100%</span>
+      <button type="button" class="figure-lightbox__zoom-in" aria-label="Zoom in">+</button>
+      <button type="button" class="figure-lightbox__zoom-reset">Reset</button>
+    </div>
+    <div class="figure-lightbox__viewport">
+      <img class="figure-lightbox__image" src="{{ '/assets/images/assignment1/distinctive_words_top100.png' | relative_url }}" alt="Top 100 distinctive words by period">
+    </div>
   </div>
 </div>
 
@@ -127,8 +135,9 @@ When increasing the scope beyond the top 15 words, we notice that there are some
     position: fixed;
     inset: 0;
     z-index: 1000;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     padding: 2rem;
     overflow: auto;
     background: rgb(0 0 0 / 90%);
@@ -140,7 +149,8 @@ When increasing the scope beyond the top 15 words, we notice that there are some
 
   .figure-lightbox__content {
     position: relative;
-    max-width: 100%;
+    width: min(95vw, 1400px);
+    margin-top: 2rem;
     text-align: center;
   }
 
@@ -150,13 +160,46 @@ When increasing the scope beyond the top 15 words, we notice that there are some
     font-size: 1.1rem;
   }
 
-  .figure-lightbox img {
+  .figure-lightbox__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .figure-lightbox__controls button,
+  .figure-lightbox__zoom-level {
+    min-width: 2.25rem;
+    padding: 0.35rem 0.65rem;
+    color: #111;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    background: #fff;
+    font-size: 1rem;
+  }
+
+  .figure-lightbox__controls button {
+    cursor: pointer;
+  }
+
+  .figure-lightbox__zoom-level {
+    min-width: 4.5rem;
+  }
+
+  .figure-lightbox__viewport {
+    max-width: 95vw;
+    max-height: 78vh;
+    overflow: auto;
+    background: #222;
+    text-align: left;
+  }
+
+  .figure-lightbox__image {
     display: block;
-    max-width: 90vw;
-    max-height: 82vh;
-    width: auto;
+    width: 100%;
+    max-width: none;
     height: auto;
-    margin: 0 auto;
   }
 
   .figure-lightbox__close {
@@ -181,6 +224,14 @@ When increasing the scope beyond the top 15 words, we notice that there are some
     const trigger = document.querySelector('.figure-zoom-trigger');
     const lightbox = document.getElementById('figure-2-lightbox');
     const closeButton = lightbox.querySelector('.figure-lightbox__close');
+    const image = lightbox.querySelector('.figure-lightbox__image');
+    const zoomLevel = lightbox.querySelector('.figure-lightbox__zoom-level');
+    let zoom = 1;
+
+    function updateZoom() {
+      image.style.width = `${image.naturalWidth * zoom}px`;
+      zoomLevel.textContent = `${Math.round(zoom * 100)}%`;
+    }
 
     function closeLightbox() {
       lightbox.hidden = true;
@@ -191,9 +242,24 @@ When increasing the scope beyond the top 15 words, we notice that there are some
     trigger.addEventListener('click', function () {
       lightbox.hidden = false;
       document.body.classList.add('figure-lightbox-open');
+      zoom = 1;
+      updateZoom();
       closeButton.focus();
     });
 
+    image.addEventListener('load', updateZoom);
+    lightbox.querySelector('.figure-lightbox__zoom-in').addEventListener('click', function () {
+      zoom = Math.min(zoom + 0.25, 3);
+      updateZoom();
+    });
+    lightbox.querySelector('.figure-lightbox__zoom-out').addEventListener('click', function () {
+      zoom = Math.max(zoom - 0.25, 0.5);
+      updateZoom();
+    });
+    lightbox.querySelector('.figure-lightbox__zoom-reset').addEventListener('click', function () {
+      zoom = 1;
+      updateZoom();
+    });
     closeButton.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', function (event) {
       if (event.target === lightbox) {
