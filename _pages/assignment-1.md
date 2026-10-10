@@ -11,15 +11,17 @@ _Use of A.I. Disclosure: We used Claude Code and Copilot to write the logic for 
   - [What we were looking for?](#what-we-were-looking-for)
   - [Hypothesis](#hypothesis)
   - [The method](#the-method)
-    - [Distinctive vocabulary using TF-IDF](#distinctive-vocabulary-using-tf-idf)
-    - [Thematic-tag comparison](#thematic-tag-comparison)
-    - [Book length](#book-length)
-    - [Book-level scatter plot](#book-level-scatter-plot)
+    - [a. Distinctive vocabulary using TF-IDF](#a-distinctive-vocabulary-using-tf-idf)
+    - [b. Thematic-tag comparison](#b-thematic-tag-comparison)
+    - [c. Book length](#c-book-length)
+    - [d. Book-level scatter plot](#d-book-level-scatter-plot)
 - [Performing the analysis](#performing-the-analysis)
-  - [Top 15 words](#top-15-words)
-  - [Top 100 words](#top-100-words)
-  - [Looking at tags](#looking-at-tags)
-  - [Average length](#average-length)
+  - [a. Top 15 words](#a-top-15-words)
+  - [b. Top 100 words](#b-top-100-words)
+  - [c. Looking at tags](#c-looking-at-tags)
+  - [d. Average length](#d-average-length)
+
+---
 
 # Introduction
 
@@ -37,27 +39,29 @@ Books written in the WW2 era will have more words related to science fiction as 
 
 In order to analyze this, we used the following techniques, with the reasoning as to why we choose them:
 
-#### Distinctive vocabulary using TF-IDF
+#### a. Distinctive vocabulary using TF-IDF
 
 The first analytical method deployed during our analysis was the TF-IDF, or short term for _term frequency-inverse document frequency_. This is a used to identify words that are especially characteristic of one group compared with other groups. In this case, we are tokenizing each book into individual words, removing any kind of punctuation, numbers, and common English stop words; all the books written in the corpus seem to be in English.
 
 After tokenizing, the words frequencies are then counted within each book. After that, the books are grouped into the three historical periods as well as we specifically remove the words appearing in fewer than five different texts, in order to get a better sample size.
 
-#### Thematic-tag comparison
+#### b. Thematic-tag comparison
 
 During our analysis, we also wanted to see what kind of themes were more prevalent during the time periods.
 
-#### Book length
+#### c. Book length
 
 During our analysis, we also found necessary later on to determine how long each book was during periods, as there could be some data that would be possible to theorize if we determine the book length. For example, during our analysis we found an outlier and we needed to determine why this outlier existed.
 
-#### Book-level scatter plot
+#### d. Book-level scatter plot
 
 As mentioned in the previous method, there was an outlier that we needed to identify, and for this, we resorted to a scatter plot from books that were published before World War II. As we were comparing the data, we were noticing certain patterns that did not make much sense.
 
+---
+
 # Performing the analysis
 
-### Top 15 words
+### a. Top 15 words
 
 The first step we made was to look for the first top 15 words that are the less frequent using the TF-IDF analysis. Which is displayed in Figure 1 below.
 
@@ -68,7 +72,7 @@ The first step we made was to look for the first top 15 words that are the less 
 
 As it can be seen in this figure, there is some prevalence of space related words during WW2, for example, words such as "Blaster," "Terran," "Spacer" can be seen. Before and after seem to show a bigger prevalence of unique words related to people's name. However, "fbi" can be seen in the "After WW2" section, suggesting there could be some themes of espionage in later books. I mainly say this given that in the book by _Science Fiction: A Very Short Introduction_ it was seems that there is some books that mention the CIA and FBI, such as Walter Tevis's _The Man Who Fell to Earth_ (1963). This book is not available in this science fiction corpus, but it is to mainly give you an idea.
 
-### Top 100 words
+### b. Top 100 words
 
 When increasing the scope beyond the top 15 words, we notice that there are some words that start being more apparent that others. Take a look into figure 2.
 
@@ -81,7 +85,7 @@ Here, if we look into the new words that popped during World War 2, we notice th
 
 It might be natural that the writers felt more inclined to write towards ideas of very advanced spaceships that go through space given the technological development of the time, as well as the increase sight seeing of planes during the time of war as well as computational advances. However, when we were looking at the results from here, the name "Tarzan" popping out many times and as frequent as it was, it made us make some tests to see if our code for analysis was inherently broken, as we did not know why Tarzan, which we associate with Disney's version of Tarzan, recognizing that it is inspired by a book, was appearing as much.
 
-### Looking at tags
+### c. Looking at tags
 
 The five tags that are available in the science fiction corpus are: action, mars, society, space travel and war. Although, we were not sure of the frequencies during the time periods we set in, so we made an analysis of the tag frequencies, as it can be seen in the following picture
 
@@ -92,7 +96,7 @@ The five tags that are available in the science fiction corpus are: action, mars
 
 It can be noticed that, before WW2, there was still some interest in themes of action (78%) and war (47.2%). However, when it came to space travel, there was no much interest, since it was around a 23.6%, compared to during WW2 when it increased to a 81.4% and after WW2 which lowered to a 59.4%. This again, could correlate to the possibility of writers being fascinated by the technological advacenments of the time.
 
-### Average length
+### d. Average length
 
 During our analysis for the top 100 words, we became curious as to why Tarzan was appearing so consistently. So we
 
