@@ -81,9 +81,132 @@ As it can be seen in this figure, there is some prevalence of space related word
 When increasing the scope beyond the top 15 words, we notice that there are some words that start being more apparent that others. Take a look into figure 2.
 
 <figure>
-  <img src="{{ '/assets/images/assignment1/distinctive_words_top100.png' | relative_url }}" alt="Top 100 distinctive words by period">
+  <button class="figure-zoom-trigger" type="button" aria-haspopup="dialog" aria-controls="figure-2-lightbox">
+    <img src="{{ '/assets/images/assignment1/distinctive_words_top100.png' | relative_url }}" alt="Top 100 distinctive words by period">
+    <span>Click to maximize</span>
+  </button>
   <figcaption>Figure 2. Top 100 distinctive words before, during, and after World War II.</figcaption>
 </figure>
+
+<div class="figure-lightbox" id="figure-2-lightbox" role="dialog" aria-modal="true" aria-labelledby="figure-2-lightbox-title" hidden>
+  <div class="figure-lightbox__content">
+    <button class="figure-lightbox__close" type="button" aria-label="Close maximized Figure 2">&times;</button>
+    <h2 id="figure-2-lightbox-title">Figure 2. Top 100 distinctive words</h2>
+    <img src="{{ '/assets/images/assignment1/distinctive_words_top100.png' | relative_url }}" alt="Top 100 distinctive words by period">
+  </div>
+</div>
+
+<style>
+  .figure-zoom-trigger {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
+  }
+
+  .figure-zoom-trigger img {
+    display: block;
+    width: 100%;
+  }
+
+  .figure-zoom-trigger span {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.45rem 0.7rem;
+    color: #fff;
+    background: rgb(0 0 0 / 75%);
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .figure-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    overflow: auto;
+    background: rgb(0 0 0 / 90%);
+  }
+
+  .figure-lightbox[hidden] {
+    display: none;
+  }
+
+  .figure-lightbox__content {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .figure-lightbox h2 {
+    margin: 0 0 1rem;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+
+  .figure-lightbox img {
+    display: block;
+    max-width: 90vw;
+    max-height: 82vh;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .figure-lightbox__close {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    color: #fff;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  body.figure-lightbox-open {
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  (function () {
+    const trigger = document.querySelector('.figure-zoom-trigger');
+    const lightbox = document.getElementById('figure-2-lightbox');
+    const closeButton = lightbox.querySelector('.figure-lightbox__close');
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      document.body.classList.remove('figure-lightbox-open');
+      trigger.focus();
+    }
+
+    trigger.addEventListener('click', function () {
+      lightbox.hidden = false;
+      document.body.classList.add('figure-lightbox-open');
+      closeButton.focus();
+    });
+
+    closeButton.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function (event) {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !lightbox.hidden) {
+        closeLightbox();
+      }
+    });
+  }());
+</script>
 
 Here, if we look into the new words that popped during World War 2, we notice that there are words such as "mercurians," "spacemen," "spaceships," "spacecraft." Words that are also related to themes of science fiction and space can be seen on the list of words from after World War 2. Such as "contragravity," "computers," "starship," "spaceport."
 
