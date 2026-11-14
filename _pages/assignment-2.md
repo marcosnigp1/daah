@@ -3,9 +3,7 @@ permalink: /assignment-2/
 title: "Assignment 2"
 ---
 
-# Introduction
-
-For this assignment, we chose to work with Lorimer’s Gazetteer of the Persian Gulf, Oman and Central Arabia to explore the following research question: How many houses does the **Gazetteer record in the Trucial States?** This question emerged as we examined the source material and the accompanying CSV dataset. References to houses offered a way to investigate the settlements described in the text and compare their recorded sizes.
+For this assignment, we chose to work with Lorimer’s Gazetteer of the Persian Gulf, Oman and Central Arabia to explore the following research question: **How many houses does the Gazetteer record in the Trucial States?** This question emerged as we examined the source material and the accompanying CSV dataset. References to houses offered a way to investigate the settlements described in the text and compare their recorded sizes.
 
 Our aim was to extract the relevant information and present it through an interactive map. Mapping the data therefore would allow us to examine the geographical distribution of the recorded houses alongside their numbers and concentration.
 
@@ -54,3 +52,21 @@ An important limitation of this approach is that a rectangular bounding box arou
   <iframe src="{{ '/assets/images/assignment2/data/lorimer-gazetteer-map.html' | relative_url }}" title="Interactive map of houses recorded in the Lorimer Gazetteer" style="width: 100%; height: 650px; border: 0;" loading="lazy"></iframe>
   <figcaption>Figure 4. Interactive map of houses recorded in the Lorimer Gazetteer.</figcaption>
 </figure>
+
+We found that the most densely populated area was along the coast. Namely, Abu Dhabi, Dubai, Sharjah, and Ras Al Khaimah being the most obvious examples. There is one clear exception: Liwa, which is the arc shaped points deep inland, is still populated albeit not as dense as the aforementioned cities.
+
+# Discussion
+
+We believe that the reasons for the most densely populated areas being along the coastline are pearl fishing, fishing for food, and trade. Pearl fishing was the primary source of income on publication of the Gazetteer in 1915 (Lorimer 1438). Pearl fishing being a source of income attracts people in the region to join and perhaps make an income. With the pearls came trade which may have also been a source of food. An additional source of food would be fishing (1440). Altogether with pearl trading attracting people and fishing and trade supplying the food to feed the influx of people that could explain why it’s populated and other places in the region are not.
+
+As for Liwa, the houses there could be explained by there being fertile land (Harris). Because it’s not as densely populated but there is still a rural population fertile land and hence farming would explain how people could live there. But, with farming being the only source of food it wouldn’t be able to support a larger population.
+
+# Limitations
+
+Lorimer’s Gazetteer is not without its limitations and the same is true of our methodology. Firstly, the Gazetteer is not a comprehensive survey of houses in the trucial states rather it looks at the broader gulf which means there may be villages, families, or some houses that were missed. In addition, the number of houses for certain families were estimated or had a large range. As for our methodology, an LLM (Claude in this case) is not going to be perfect. The LLM could examine the more than 2000 pages in roughly 10 minutes however we cannot verify that it associated the right number of houses with the right families. Fortunately, the PDF of the Gazetteer had text which could be read directly by the LLM and did not need an OCR with a few exceptions (in which case Tesseract was used), but that’s not perfect either.
+
+# References
+
+Harris, Tony. “The Liwa Oasis.” Emirates Natural History Group Bulletin, no. 2, June 1977, enhg.org/bulletin/b02/02_11.HTM
+
+Lorimer, J. G. (1908). Gazetteer of the Persian Gulf, ‘Oman and Central Arabia. Vol. II: Geographical and Statistical. Government of India. See “‘Oman (Trucial),” pp. 1438–1440.
