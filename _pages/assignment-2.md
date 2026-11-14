@@ -3,6 +3,21 @@ permalink: /assignment-2/
 title: "Assignment 2"
 ---
 
+<style>
+  .layout--single .page {
+    width: min(900px, calc(100% - 2rem));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    float: none;
+  }
+
+  .layout--single .page__inner-wrap,
+  .layout--single .page__content {
+    max-width: none;
+  }
+</style>
+
 For this assignment, we chose to work with Lorimer’s Gazetteer of the Persian Gulf, Oman and Central Arabia to explore the following research question: **How many houses does the Gazetteer record in the Trucial States?** This question emerged as we examined the source material and the accompanying [original CSV dataset]({{ '/assets/images/assignment2/data/lorimer-gazetteer-1-0.csv' | relative_url }}). References to houses offered a way to investigate the settlements described in the text and compare their recorded sizes.
 
 Our aim was to extract the relevant information and present it through an interactive map. Mapping the data therefore would allow us to examine the geographical distribution of the recorded houses alongside their numbers and concentration.
