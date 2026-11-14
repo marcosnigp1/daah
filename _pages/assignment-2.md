@@ -65,6 +65,12 @@ As for Liwa, the houses there could be explained by there being fertile land (Ha
 
 Lorimer’s Gazetteer is not without its limitations and the same is true of our methodology. Firstly, the Gazetteer is not a comprehensive survey of houses in the trucial states rather it looks at the broader gulf which means there may be villages, families, or some houses that were missed. In addition, the number of houses for certain families were estimated or had a large range. As for our methodology, an LLM (Claude in this case) is not going to be perfect. The LLM could examine the more than 2000 pages in roughly 10 minutes however we cannot verify that it associated the right number of houses with the right families. Fortunately, the PDF of the Gazetteer had text which could be read directly by the LLM and did not need an OCR with a few exceptions (in which case Tesseract was used), but that’s not perfect either.
 
+This would fall directly into what has been taught to us about the dangers of distant reading, in the sense that we will not get all the information that might be understood if we carefully read each page. However, realistically reading around 2,000 pages as a student could be considered almost impossible.
+
+# Conclusion
+
+From this assignment we could apply some of the new knowledge that was given to us in class, as well as engage in map analysis with an old text. Therefore, by extracting house counts from Lorimer’s Gazetteer and plotting their locations, with Python and Kepler.gl to automatize the process, we were able to plot some of the locations. However, when it comes to analysis, we encountered that we had to engage in a lot of Distant Reading with the usage of LLMs, therefore maybe leaving some room for errors that we might not be very aware of.
+
 # References
 
 Harris, Tony. “The Liwa Oasis.” Emirates Natural History Group Bulletin, no. 2, June 1977, enhg.org/bulletin/b02/02_11.HTM
