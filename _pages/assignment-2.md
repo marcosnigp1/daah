@@ -24,9 +24,9 @@ Our aim was to extract the relevant information and present it through an intera
 
 However, answering this question required more than simply plotting the available data. We also needed to establish a geographical area of interest, filter out unrelated locations, and extract house counts from the relevant text. The project therefore involved several stages of data preparation, mapping, and analysis that will be showcased here.
 
----
-
 # Process
+
+---
 
 To begin, we identified two main requirements:
 
@@ -65,9 +65,9 @@ An important limitation of this approach is that a rectangular bounding box arou
 
 To finish with this section, we can say that one thing we learned from this process was that displaying a boundary and filtering the data are two different steps. Initially, we expected that adding the bounding box would also limit the locations shown. However, the second test demonstrated that this was not the case. We therefore had to return to the dataset itself and check which records were being included. This showed us why checking each stage was necessary, even when the code appeared to produce a working map, and as well even if the LLM seems to be appearing as correct.
 
----
-
 # Result
+
+---
 
 <figure>
   <iframe src="{{ '/assets/images/assignment2/data/lorimer-gazetteer-map.html' | relative_url }}" title="Interactive map of houses recorded in the Lorimer Gazetteer" style="width: 100%; height: 650px; border: 0;" loading="lazy"></iframe>
@@ -78,17 +78,17 @@ We found that the most densely populated area was along the coast. Namely, Abu D
 
 An important distinction here is that the map shows recorded houses rather than the number of people living in each location (as far as we are aware of). Therefore, a location with more houses does not necessarily have a proportionally larger population.
 
----
-
 # Discussion
+
+---
 
 We believe that the reasons for the most densely populated areas being along the coastline are pearl fishing, fishing for food, and trade. Pearl fishing was the primary source of income on publication of the Gazetteer in 1915 (Lorimer 1438). Pearl fishing being a source of income attracts people in the region to join and perhaps make an income. With the pearls came trade which may have also been a source of food. An additional source of food would be fishing (1440). Altogether with pearl trading attracting people and fishing and trade supplying the food to feed the influx of people that could explain why it’s populated and other places in the region are not.
 
 As for Liwa, the houses there could be explained by there being fertile land (Harris). Because it’s not as densely populated but there is still a rural population fertile land and hence farming would explain how people could live there. But, with farming being the only source of food it wouldn’t be able to support a larger population.
 
----
-
 # Limitations
+
+---
 
 Lorimer’s Gazetteer is not without its limitations and the same is true of our methodology. Firstly, the Gazetteer is not a comprehensive survey of houses in the trucial states rather it looks at the broader gulf which means there may be villages, families, or some houses that were missed. In addition, the number of houses for certain families were estimated or had a large range. As for our methodology, an LLM (Claude in this case) is not going to be perfect. The LLM could examine the more than 2000 pages in roughly 10 minutes however we cannot verify that it associated the right number of houses with the right families. Fortunately, the PDF of the Gazetteer had text which could be read directly by the LLM and did not need an OCR with a few exceptions (in which case Tesseract was used), but that’s not perfect either.
 
@@ -96,15 +96,15 @@ This would fall directly into what has been taught to us about the dangers of di
 
 If we were to develop this project further, one useful step would be to compare a sample of the extracted house counts with the original passages. This would help us assess whether the LLM had interpreted the numbers correctly and whether any information had been lost. But due to some time constraints as senior students, we are unable to do so for the moment.
 
----
-
 # Conclusion
+
+---
 
 From this assignment we could apply some of the new knowledge that was given to us in class, as well as engage in map analysis with an old text. Therefore, by extracting house counts from Lorimer’s Gazetteer and plotting their locations, with Python and Kepler.gl to automatize the process, we were able to plot some of the locations. However, when it comes to analysis, we encountered that we had to engage in a lot of Distant Reading with the usage of LLMs, therefore maybe leaving some room for errors that we might not be very aware of.
 
----
-
 # References
+
+---
 
 Harris, Tony. “The Liwa Oasis.” Emirates Natural History Group Bulletin, no. 2, June 1977, enhg.org/bulletin/b02/02_11.HTM
 
