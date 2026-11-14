@@ -61,6 +61,8 @@ Once we had created this smaller dataset, we asked Claude to analyse the associa
 
 An important limitation of this approach is that a rectangular bounding box around the present-day UAE does not precisely define the historical Trucial States. The geographical filter therefore provides a practical starting point, but the included locations still require historical verification.
 
+To finish with this section, we can say that one thing we learned from this process was that displaying a boundary and filtering the data are two different steps. Initially, we expected that adding the bounding box would also limit the locations shown. However, the second test demonstrated that this was not the case. We therefore had to return to the dataset itself and check which records were being included. This showed us why checking each stage was necessary, even when the code appeared to produce a working map, and as well even if the LLM seems to be appearing as correct.
+
 # Result
 
 <figure>
@@ -69,6 +71,8 @@ An important limitation of this approach is that a rectangular bounding box arou
 </figure>
 
 We found that the most densely populated area was along the coast. Namely, Abu Dhabi, Dubai, Sharjah, and Ras Al Khaimah being the most obvious examples. There is one clear exception: Liwa, which is the arc shaped points deep inland, is still populated albeit not as dense as the aforementioned cities.
+
+An important distinction here is that the map shows recorded houses rather than the number of people living in each location (as far as we are aware of). Therefore, a location with more houses does not necessarily have a proportionally larger population.
 
 # Discussion
 
@@ -81,6 +85,8 @@ As for Liwa, the houses there could be explained by there being fertile land (Ha
 Lorimer’s Gazetteer is not without its limitations and the same is true of our methodology. Firstly, the Gazetteer is not a comprehensive survey of houses in the trucial states rather it looks at the broader gulf which means there may be villages, families, or some houses that were missed. In addition, the number of houses for certain families were estimated or had a large range. As for our methodology, an LLM (Claude in this case) is not going to be perfect. The LLM could examine the more than 2000 pages in roughly 10 minutes however we cannot verify that it associated the right number of houses with the right families. Fortunately, the PDF of the Gazetteer had text which could be read directly by the LLM and did not need an OCR with a few exceptions (in which case Tesseract was used), but that’s not perfect either.
 
 This would fall directly into what has been taught to us about the dangers of distant reading, in the sense that we will not get all the information that might be understood if we carefully read each page. However, realistically reading around 2,000 pages as a student could be considered almost impossible.
+
+If we were to develop this project further, one useful step would be to compare a sample of the extracted house counts with the original passages. This would help us assess whether the LLM had interpreted the numbers correctly and whether any information had been lost. But due to some time constraints as senior students, we are unable to do so for the moment.
 
 # Conclusion
 
