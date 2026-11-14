@@ -1,0 +1,185 @@
+﻿ROW_ID,FAMILY,TRIBE,SECTION,PLACE_NAME,LATITUDE,LONGITUDE,GEONAMES_ID,HOUSES,HOUSES_TEXT,UNIT,SCOPE,OVERLAPS_OTHER_ROWS,COORD_FLAG,SOURCE_ARTICLE,PDF_PAGE,PRINTED_PAGE,NOTE
+1,'Abādilah,'Abādilah,,Shārjah Town,25.33737,55.41206,292672,200,,houses,place,False,ok,'Abādilah,8,1,Shārjah Town article (p.1762) agrees
+2,'Abādilah,'Abādilah,,Ghāllah,25.0513,56.35422,291763,20,,houses,place,False,ok,'Abādilah,8,1,Ghāllah article (p.576) says 20 families
+3,'Abādilah,'Abādilah,,Khalaibīyah,25.38124,56.17358,291672,15,,houses,place,False,ok,'Abādilah,8,1,
+4,'Abādilah and Sharqiyīn,Mixed,'Abādilah and Sharqiyīn,Khalaibīyah,25.38124,56.17358,291672,30,,houses,place,True,ok,Hām (Wādi),654,619,Village total; includes the 15 'Abādilah houses counted in their own row
+5,Na'īm,Na'īm,Qarātisah; Hamīrāt; Āl Bū Dhanain,'Ajmān Town,25.40177,55.47878,292932,25,,houses,place,False,ok,'Ajmān Town,58,53,Na'īm table (p.1301) agrees
+6,Āl Bū Mahair,Āl Bū Mahair,,'Ajmān Town,25.40177,55.47878,292932,80,,houses,place,False,ok,'Ajmān Town,58,53,Āl Bū Mahair article (p.1121) agrees
+7,Sūdān,Sūdān,,'Ajmān Town,25.40177,55.47878,292932,12,,houses,place,False,ok,'Ajmān Town,58,53,Sūdān article (p.1842) agrees
+8,Āl Bū Kalbi,Āl Bū Kalbi,,'Ajmān Town,25.40177,55.47878,292932,14,,houses,place,False,ok,'Ajmān Town,58,53,
+9,Masāibah,Masāibah,,'Ajmān Town,25.40177,55.47878,292932,5,,houses,place,False,ok,'Ajmān Town,58,53,
+10,Shāqōsh,Shāqōsh,,'Ajmān Town,25.40177,55.47878,292932,12,,houses,place,False,ok,'Ajmān Town,58,53,
+11,Āl 'Ali,Āl 'Ali,,Umm-al-Qaiwain Town,25.56473,55.55517,290594,1000,,families,place,False,ok,'Ali (Āl or Ahl),69,62,"Town article (p.1475): about 1,000 houses, all Āl 'Ali except a few Āl Bū Mahair"
+12,Āl 'Ali,Āl 'Ali,,Shārjah Town,25.33737,55.41206,292672,200,,families,place,False,ok,'Ali (Āl or Ahl),69,62,Shārjah Town article (p.1762): 200 houses
+13,Āl 'Ali,Āl 'Ali,,Rās-al-Khaimah Town,25.78953,55.9432,291074,150,,families,place,False,ok,'Ali (Āl or Ahl),69,62,Rās-al-Khaimah Town article (p.1008): 150 houses
+14,Āl 'Ali,Āl 'Ali,,Umm-al-Qaiwain (hinterland),25.5,55.75,290595,140,about 140,families,district,False,ok,'Ali (Āl or Ahl),69,62,"Bedouin portion, ranging from Umm-al-Qaiwain to Jazīrat-al-Hamrah and inland to Falaj Āl 'Ali"
+15,Āl 'Ali,Āl 'Ali,,Falaj Āl 'Ali,25.35401,55.85332,292202,60,some 60,households,place,False,ok,Qaiwain (Umm-al-),1554,1475,May be part of the 140 Bedouin families; Lorimer does not say
+16,Āl Bū Mahair,Āl Bū Mahair,,Rās-al-Khaimah Town,25.78953,55.9432,291074,120,,houses,place,False,ok,Mahair (Āl Bū),1178,1121,Rās-al-Khaimah Town article (p.1008) agrees
+17,Āl Bū Mahair,Āl Bū Mahair,,Umm-al-Qaiwain Town,25.56473,55.55517,290594,30,,houses,place,False,ok,Mahair (Āl Bū),1178,1121,
+18,Āl Bū Mahair,Āl Bū Mahair,,Shārjah Town,25.33737,55.41206,292672,200,,houses,place,False,ok,Mahair (Āl Bū),1178,1121,Shārjah Town article (p.1762) agrees
+19,Āl Bū Mahair,Āl Bū Mahair,,Khān,25.33141,55.35901,292826,60,,houses,place,False,ok,Mahair (Āl Bū),1178,1121,"Khān article (p.1019): about 200 houses in all, of Āl Bū Mahair, Mazārī' and Manāsīr"
+20,Āl Bū Mahair,Āl Bū Mahair,,Dibai Town,25.07725,55.30927,292223,400,,houses,place,False,ok,Mahair (Āl Bū),1178,1121,Dibai Town article (p.455) agrees
+21,Āl Bū Mahair,Āl Bū Mahair,,Abu Dhabi Town,24.45118,54.39696,292968,100,,houses,place,False,ok,Mahair (Āl Bū),1178,1121,
+22,Āl Bū Mahair,Āl Bū Mahair,,Batīn,24.4429,54.35539,292540,100,,houses,place,False,ok,Mahair (Āl Bū),1178,1121,Abu Dhabi Principality table (p.406) agrees: 100 of Batīn's 130 huts
+23,Āl Bū Mahair,Āl Bū Mahair,,Abu Dhabi Principality,23.66667,54.0,292969,20,perhaps 20,households,district,False,ok,Mahair (Āl Bū),1178,1121,Bedouin households
+24,Marar,Marar,,Laiyah (Shārjah Town),25.35397,55.37189,291620,200,,houses,place,False,ok,Marar,1238,1169,In the Laiyah quarter; Shārjah Town article (p.1762) agrees
+25,Marar,Marar,,Abu Dhabi Town,24.45118,54.39696,292968,40,,houses,place,False,ok,Marar,1238,1169,
+26,Marar,Marar,,Dibai Town,25.07725,55.30927,292223,30,,houses,place,False,ok,Marar,1238,1169,Dibai Town article (p.455) agrees
+27,Marar,Marar,,Līwah,22.97478,54.19517,291603,70,about 70,families,district,False,ok,Marar,1238,1169,Bedouin families inhabiting Līwah
+28,Hūwalah,Hūwalah,,Shārjah Town,25.33737,55.41206,292672,300,,households,place,False,ok,Hūwalah,802,755,Shārjah Town article (p.1762): 300 houses
+29,Hūwalah,Hūwalah,,Sirri Island,25.90833,54.53167,114250,30,,families,place,False,ok,Hūwalah,802,755,
+30,Khawātir,Na'īm,Khawātir,Dhaid,25.28812,55.88157,292953,30,,houses,place,False,ok,Na'īm,1376,1301,Dhaid article (p.434) agrees
+31,Darāwishah,Na'īm,Darāwishah,Hairah,25.38148,55.41955,292850,250,,houses,place,False,ok,Na'īm,1376,1301,Shārjah Principality table (p.1758) agrees
+32,Darāwishah,Na'īm,Darāwishah,Hamrīyah,25.47819,55.53377,292856,250,,houses,place,False,ok,Na'īm,1376,1301,"Hamrīyah article (p.623): about 300 houses in all, Na'īm with a few Tanaij"
+33,Āl Bū Shāmis,Na'īm,Āl Bū Shāmis,Haqālah,23.75976,56.32029,11785415,10,,houses,place,False,check,Na'īm,1376,1301,Dhaid table (p.435) agrees. Coordinate: CSV point lies far south of Dhaid; Lorimer puts it in the hills 15-20 miles SE of Dhaid
+34,Āl Bū Shāmis,Na'īm,Āl Bū Shāmis,Shārjah Town,25.33737,55.41206,292672,100,,houses,place,False,ok,Na'īm,1376,1301,Shārjah Town article (p.1762) agrees
+35,Na'īm,Na'īm,,Dhank Town,23.55054,56.25725,288575,660,,houses,place,False,ok,Na'īm,1376,1301,'Omān Sultanate
+36,Na'īm,Na'īm,,Sanainah,23.6065,55.95448,288958,200,,houses,place,False,ok,Na'īm,1376,1301,'Omān Sultanate
+37,Na'īm,Na'īm,,Baraimi Village,24.25088,55.79312,289317,100,,houses,place,False,ok,Na'īm,1376,1301,Jau (Independent 'Omān)
+38,Na'īm,Na'īm,,Hafīt,23.98885,55.83227,288174,150,,houses,place,False,ok,Na'īm,1376,1301,Jau (Independent 'Omān)
+39,Na'īm,Na'īm,,Qābil,,,,180,,houses,place,False,missing,Na'īm,1376,1301,Jau (Independent 'Omān)
+40,Na'īm,Na'īm,,Su'arah,24.25,55.78389,288979,100,,houses,place,False,ok,Na'īm,1376,1301,Jau (Independent 'Omān)
+41,Sūdān,Sūdān,,Abu Dhabi Town,24.45118,54.39696,292968,375,,houses,place,False,ok,Sūdān,1931,1842,
+42,Sūdān,Sūdān,,Batīn,24.4429,54.35539,292540,30,,houses,place,False,ok,Sūdān,1931,1842,Abu Dhabi Principality table (p.406) agrees: 30 of Batīn's 130 huts
+43,Sūdān,Sūdān,,Dibai Town,25.07725,55.30927,292223,250,,houses,place,False,ok,Sūdān,1931,1842,Dibai Town article (p.455) agrees
+44,Sūdān,Sūdān,,Shārjah Town,25.33737,55.41206,292672,300,,houses,place,False,ok,Sūdān,1931,1842,Shārjah Town article (p.1762) gives 300 in Shārjah Town proper plus 100 more in Laiyah
+45,Sūdān,Sūdān,,Laiyah (Shārjah Town),25.35397,55.37189,291620,100,,houses,place,False,ok,Shārjah Town,1851,1762,"Not mentioned in the Sūdān article, which gives 300 for Shārjah Town"
+46,Sūdān,Sūdān,,Bū Mūsa Island,25.875,55.03,292983,20,,houses,place,False,ok,Sūdān,1931,1842,Bū Mūsa article (p.1275): above 20 households
+47,Sūdān,Sūdān,,Sirri Island,25.90833,54.53167,114250,40,about 40,families,place,False,ok,Sūdān,1931,1842,
+48,Tanaij,Tanaij,,Rams,25.87658,56.01862,292692,400,,houses,place,False,ok,Tanaij,1951,1858,"Rams article (p.1573): about 400 houses, all Tanaij"
+49,Tanaij,Tanaij,,Dhaid,25.28812,55.88157,292953,70,,houses,place,False,ok,Tanaij,1951,1858,Dhaid article (p.434) agrees
+50,Za'āb,Za'āb,,Jazīrat-al-Hamra,25.70361,55.79556,291980,500,,houses,place,False,ok,Za'āb,2031,1936,Hamra article (p.623) agrees
+51,Za'āb,Za'āb,,Khor Kalba,25.02193,56.36463,291694,150,about 150,families,place,False,ok,Za'āb,2031,1936,Khor Kalba article (p.970): 150 houses
+52,Āl Falāh,Bani Yās,Āl Falāh,Līwah,22.97478,54.19517,291603,35,,houses,district,True,ok,Yās (Bani),2027,1932,"At Dhawaihir, Kaiyih and Shidaq-al-Kalb; those villages have their own rows"
+53,Āl Bū Falāh,Bani Yās,Āl Bū Falāh,Abu Dhabi Town,24.45118,54.39696,292968,10,about 10,houses,place,False,ok,Yās (Bani),2027,1932,Also known as Āl Nahyān
+54,Āl Bū Falāh,Bani Yās,Āl Bū Falāh,Līwah,22.97478,54.19517,291603,5,,houses,district,True,ok,Yās (Bani),2027,1932,At Kaiyih and Shāh; those villages have their own rows
+55,Āl Bū Falāsah,Bani Yās,Āl Bū Falāsah,Dibai Town,25.07725,55.30927,292223,400,,houses,place,False,ok,Yās (Bani),2027,1932,"Dibai Town article (p.455) gives 440 for Āl Bū Falāsah and Sabāis together, which matches 400 + 40"
+56,Āl Bū Falāsah,Bani Yās,Āl Bū Falāsah,Abu Dhabi Town,24.45118,54.39696,292968,40,,houses,place,False,ok,Yās (Bani),2027,1932,
+57,Āl Bū Hamīr,Bani Yās,Āl Bū Hamīr,Abu Dhabi Town,24.45118,54.39696,292968,60,,houses,place,False,ok,Yās (Bani),2028,1933,
+58,Āl Bū Hamīr,Bani Yās,Āl Bū Hamīr,Abu Dhabi Town (neighbourhood),24.45118,54.39696,292968,140,,houses,district,False,ok,Yās (Bani),2028,1933,'In the open with the Qumzān'; principal Bedouin section
+59,Hawāmil,Bani Yās,Hawāmil,Abu Dhabi Town,24.45118,54.39696,292968,100,,houses,place,False,ok,Yās (Bani),2028,1933,
+60,Hawāmil,Bani Yās,Hawāmil,Abu Dhabi Town (neighbourhood),24.45118,54.39696,292968,50,,houses,district,False,ok,Yās (Bani),2028,1933,'In the neighbourhood' of Abu Dhabi Town
+61,Hawāmil,Bani Yās,Hawāmil,Līwah,22.97478,54.19517,291603,190,,houses,district,True,ok,Yās (Bani),2028,1933,"At Hādhi, Shāh, Subakhah, Tharwānīyah, Wahaidah and Wazīl; those villages have their own rows"
+62,Mahāribah,Bani Yās,Mahāribah,Abu Dhabi Town,24.45118,54.39696,292968,60,,houses,place,False,ok,Yās (Bani),2028,1933,
+63,Mahāribah,Bani Yās,Mahāribah,Abu Dhabi Town (neighbourhood),24.45118,54.39696,292968,50,,houses,district,False,ok,Yās (Bani),2028,1933,'In the neighbourhood' of Abu Dhabi Town
+64,Mahāribah,Bani Yās,Mahāribah,Līwah,22.97478,54.19517,291603,150,,houses,district,True,ok,Yās (Bani),2028,1933,"At Dhafīr, Muzaira'ah, Qarmidah, Sālimi and Taraq; those villages have their own rows"
+65,Mazārī',Bani Yās,Mazārī',Abu Dhabi Town,24.45118,54.39696,292968,60,,houses,place,False,ok,Yās (Bani),2028,1933,
+66,Mazārī',Bani Yās,Mazārī',Līwah,22.97478,54.19517,291603,315,,houses,district,True,ok,Yās (Bani),2028,1933,"At 'Āyih, Hafīf, Huwailah, Khannūr, Lidāmah, Latīr (II), Mārīyah and Suhail; those places have their own rows"
+67,Qanaisāt,Bani Yās,Qanaisāt,Līwah,22.97478,54.19517,291603,15,,houses,district,True,ok,Yās (Bani),2028,1933,"At Latīr (I), which has its own row"
+68,Qasal,Bani Yās,Qasal,Līwah,22.97478,54.19517,291603,8,,houses,district,True,ok,Yās (Bani),2028,1933,"At Shāh, which has its own row"
+69,Qubaisāt,Bani Yās,Qubaisāt,Abu Dhabi Town,24.45118,54.39696,292968,75,,houses,place,False,ok,Yās (Bani),2028,1933,
+70,Qubaisāt,Bani Yās,Qubaisāt,Līwah,22.97478,54.19517,291603,185,,houses,district,True,ok,Yās (Bani),2028,1933,"At 'Attāb, Dhawaihir, Mārīyah, Muzaira'ah, Qarmidah, Qutūf, Shidaq-al-Kalb and Yaif; those villages have their own rows"
+71,Qubaisāt,Bani Yās,Qubaisāt,Dalmah Island,24.51099,52.30893,292288,15,,houses,place,False,ok,Yās (Bani),2028,1933,Dalmah article (p.363): about 15 families
+72,Qumzān,Bani Yās,Qumzān,Abu Dhabi Town,24.45118,54.39696,292968,50,,houses,place,False,ok,Yās (Bani),2029,1934,
+73,Qumzān,Bani Yās,Qumzān,Abu Dhabi Town (neighbourhood),24.45118,54.39696,292968,100,,houses,district,False,ok,Yās (Bani),2029,1934,"'In the country adjoining, especially in the neighbourhood of Raknah'"
+74,Rumaithāt,Bani Yās,Rumaithāt,Abu Dhabi Town,24.45118,54.39696,292968,100,,houses,place,False,ok,Yās (Bani),2029,1934,
+75,Rumaithāt,Bani Yās,Rumaithāt,Samaih,24.72276,54.77993,290719,50,,houses,district,False,ok,Yās (Bani),2029,1934,"'In the country adjoining, particularly about Samaih'"
+76,Sabāis,Bani Yās,Sabāis,Dibai Town,25.07725,55.30927,292223,40,,houses,place,False,ok,Yās (Bani),2029,1934,Originally Tanaij
+77,Bani Shikr,Bani Yās,Bani Shikr,Līwah,22.97478,54.19517,291603,80,,houses,district,True,ok,Yās (Bani),2029,1934,"At Mūqab, which has its own row"
+78,Āl Sultān,Bani Yās,Āl Sultān,Līwah,22.97478,54.19517,291603,35,,houses,district,True,ok,Yās (Bani),2029,1934,"At Kaiyih, Qarmidah and Shidaq-al-Kalb; those villages have their own rows"
+79,Qubaisāt,Bani Yās,Qubaisāt,'Attāb,23.1518,53.8811,292641,20,,huts,place,False,ok,Dhafrah,441,416,Permanent hamlet
+80,Mazārī',Bani Yās,Mazārī','Āyih,,,,25,,families,place,False,missing,Dhafrah,441,416,"Well and camping place, in Dhafrah proper"
+81,Āl Bū Mindhir,Manāsīr,Āl Bū Mindhir,Dāhin,24.48333,56.06667,288586,6,,houses,place,False,check,Dhafrah,442,417,Summer hamlet. Coordinate: CSV point lies outside Līwah; Lorimer puts it in Līwah
+82,Mahāribah,Bani Yās,Mahāribah,Dhafīr,23.12731,53.75439,290454,30,,huts,place,False,ok,Dhafrah,442,417,Permanent village
+83,Bani Yās,Bani Yās,Āl Falāh; Qubaisāt,Dhawaihir,23.28333,53.2,290400,30,,huts,place,False,ok,Dhafrah,443,418,
+84,Hawāmil,Bani Yās,Hawāmil,Hādhi,23.10642,53.99527,292865,15,,huts,place,False,ok,Dhafrah,443,418,Permanent hamlet
+85,Mazārī',Bani Yās,Mazārī',Hafīf,,,,50,,huts,place,False,missing,Dhafrah,443,418,Permanent village
+86,Āl Taraif,Manāsīr,Āl Taraif,Hamaim,22.95805,54.29721,291987,30,,huts,place,False,ok,Dhafrah,443,418,Summer village
+87,Mazārī',Bani Yās,Mazārī',Huwailah,23.15201,53.82462,291848,40,,huts,place,False,ok,Dhafrah,443,418,Permanent village
+88,Āl Bū Mindhir,Manāsīr,Āl Bū Mindhir,'Idd,23.0794,53.5548,292841,50,,huts,place,False,ok,Dhafrah,444,419,Summer village
+89,Āl Bū Sha'ar,Manāsīr,Āl Bū Sha'ar,Jarairah,,,,6,,huts,place,False,missing,Dhafrah,444,419,Summer hamlet
+90,Āl Bū Sha'ar,Manāsīr,Āl Bū Sha'ar,Jarrah,24.05,54.1,291804,10,,huts,place,False,check,Dhafrah,444,419,"Summer hamlet. Coordinate: CSV point lies north of Līwah; Lorimer puts it in Līwah, 20 miles SW of Hamaim"
+91,Bani Yās,Bani Yās,Āl Bū Falāh; Āl Falāh; Āl Sultān,Kaiyih,23.15696,53.68541,291756,20,,huts,place,False,ok,Dhafrah,445,420,
+92,Mazārī',Bani Yās,Mazārī',Khannūr,23.10092,53.60594,291730,100,,huts,place,False,ok,Dhafrah,445,420,Permanent village
+93,Qanaisāt,Bani Yās,Qanaisāt,Latīr (I),23.16261,53.73617,292915,15,,huts,place,False,ok,Dhafrah,446,421,Permanent village
+94,Mazārī',Bani Yās,Mazārī',Latīr (II),,,,30,,families,place,False,missing,Dhafrah,446,421,"Well and camping place, in Dhafrah proper"
+95,Mazārī',Bani Yās,Mazārī',Lidāmah,,,,20,,families,place,False,missing,Dhafrah,446,421,Camping ground
+96,Bani Yās,Bani Yās,Mazārī'; Qubaisāt,Mārīyah,23.13848,53.7426,292793,70,,huts,place,False,ok,Dhafrah,446,421,Permanent village
+97,Āl Bū Sha'ar,Manāsīr,Āl Bū Sha'ar,Mōsal,,,,10,,huts,place,False,missing,Dhafrah,446,421,Summer hamlet
+98,Bani Shikr,Bani Yās,Bani Shikr,Mūqab,23.09784,53.69551,12748154,80,,huts,place,False,ok,Dhafrah,447,422,Permanent village
+99,Bani Yās,Bani Yās,Mahāribah; Qubaisāt,Muzaira'ah,23.14355,53.7881,291279,80,,huts,place,False,ok,Dhafrah,447,422,Permanent village
+100,Āl Bū Rahamah,Manāsīr,Āl Bū Rahamah,Qa'aisah,,,,15,,huts,place,False,missing,Dhafrah,448,423,Summer hamlet
+101,Bani Yās,Bani Yās,Mahāribah; Qubaisāt; Āl Sultān,Qarmidah,23.11234,53.82152,291126,40,,huts,place,False,ok,Dhafrah,448,423,Permanent village
+102,Qubaisāt,Bani Yās,Qubaisāt,Qutūf,23.10971,53.72738,291116,25,,huts,place,False,ok,Dhafrah,448,423,
+103,Mahāribah,Bani Yās,Mahāribah,Sālimi,22.9118,54.3397,290941,30,,huts,place,False,ok,Dhafrah,449,424,
+104,Āl Bū Mindhir,Manāsīr,Āl Bū Mindhir,Sarait,,,,20,,huts,place,False,missing,Dhafrah,449,424,Summer village
+105,Bani Yās,Bani Yās,Āl Bū Falāh; Hawāmil; Qasal,Shāh,23.13561,53.91653,290863,60,,huts,place,False,ok,Dhafrah,450,425,Permanent village
+106,Bani Yās,Bani Yās,Āl Falāh; Qubaisāt; Āl Sultān,Shidaq-al-Kalb,23.13385,53.73315,290797,40,,huts,place,False,ok,Dhafrah,450,425,
+107,Hawāmil,Bani Yās,Hawāmil,Subakhah,23.12917,53.98181,290989,30,,huts,place,False,ok,Dhafrah,450,425,Permanent village
+108,Mazārī',Bani Yās,Mazārī',Suhail,24.80812,56.18258,286280,15,,families,place,False,check,Dhafrah,450,425,"Camping ground, in Dhafrah proper. Coordinate: CSV point lies outside Dhafrah; Lorimer puts it 25 miles north of Hādhi"
+109,Mahāribah,Bani Yās,Mahāribah,Taraq,23.02725,53.88404,290676,40,about 40,huts,place,False,ok,Dhafrah,450,425,Permanent village
+110,Āl Bū Mindhir,Manāsīr,Āl Bū Mindhir,Tharwānīyah,23.11088,54.01572,290658,30,,huts,place,False,ok,Dhafrah,451,426,Summer village
+111,Hawāmil,Bani Yās,Hawāmil,Tharwānīyah,23.11088,54.01572,290658,25,about 25,households,place,False,ok,Dhafrah,451,426,Permanent residents
+112,Hawāmil,Bani Yās,Hawāmil,Wahaidah,23.13333,53.93333,290489,25,,huts,place,False,ok,Dhafrah,451,426,
+113,Hawāmil,Bani Yās,Hawāmil,Wazīl,23.0474,54.13332,290521,20,,huts,place,False,ok,Dhafrah,451,426,Permanent village
+114,Qubaisāt,Bani Yās,Qubaisāt,Yaif,23.15786,53.77762,291799,25,,huts,place,False,ok,Dhafrah,451,426,
+115,Bani Qitab,Bani Qitab,,Dhaid,25.28812,55.88157,292953,40,,houses,place,False,ok,Dhaid,459,434,
+116,Bayādir (peasant class),Bayādir (peasant class),,Dibah,25.61955,56.27291,292239,100,,houses,place,False,ok,Dibah,480,453,
+117,'Awānāt,'Awānāt,,Dibah,25.61955,56.27291,292239,50,,houses,place,False,ok,Dibah,480,453,
+118,Naqbiyīn,Naqbiyīn,,Dibah,25.61955,56.27291,292239,15,,houses,place,False,ok,Dibah,480,453,
+119,Sharqiyīn,Sharqiyīn,,Dibah,25.61955,56.27291,292239,10,,houses,place,False,ok,Dibah,480,453,
+120,"Bani Yās, Manāsīr and mixed tribes",Mixed,"Bani Yās, Manāsīr and mixed tribes",Jumairah,25.20795,55.24969,291775,45,,huts,place,False,ok,Dibai Principality,481,454,
+121,"Mixed tribes, chiefly Arabs (incl. Mazārī', Bahrainis, Kuwaitis)",Mixed,"Mixed tribes, chiefly Arabs (incl. Mazārī', Bahrainis, Kuwaitis)",Dibai Town,25.07725,55.30927,292223,400,,houses,place,False,ok,Dibai Town,482,455,
+122,Persians,Persians,,Dibai Town,25.07725,55.30927,292223,250,,houses,place,False,ok,Dibai Town,482,455,
+123,Balūchis,Balūchis,,Dibai Town,25.07725,55.30927,292223,200,,houses,place,False,ok,Dibai Town,482,455,
+124,Natives of the Hasa Oasis,Natives of the Hasa Oasis,,Dibai Town,25.07725,55.30927,292223,50,,houses,place,False,ok,Dibai Town,482,455,
+125,Shwaihiyīn,Shwaihiyīn,,Dibai Town,25.07725,55.30927,292223,10,,houses,place,False,ok,Dibai Town,482,455,
+126,Naqbiyīn and Arabicised Persians,Mixed,Naqbiyīn and Arabicised Persians,Khor Fakkān,25.33132,56.34199,291696,150,about 150,houses,place,False,ok,Fakkān (Khor),545,516,
+127,Sharqiyīn,Sharqiyīn,Hafaitāt (mostly),Fujairah,25.11641,56.34141,292878,150,about 150,houses,place,False,ok,Fujairah,590,555,
+128,Kunūd,Kunūd,,Ghāllah,25.0513,56.35422,291763,20,,families,place,False,ok,Ghāllah,611,576,Village has about 300 houses in all; other tribes not counted separately
+129,Mazārī' and Shahairah,Mixed,Mazārī' and Shahairah,'Asimah,25.39831,56.15073,292680,50,,houses,place,False,ok,Hām (Wādi),653,618,
+130,Sharqiyīn,Sharqiyīn,,Bilaidah,25.22388,56.20221,292368,4,,houses,place,False,ok,Hām (Wādi),653,618,
+131,Sharqiyīn,Sharqiyīn,,Bithnah,25.18951,56.23516,292898,50,,houses,place,False,ok,Hām (Wādi),653,618,
+132,Naqbiyīn,Naqbiyīn,,Diftah,25.27226,56.18353,292301,10,,houses,place,False,ok,Hām (Wādi),654,619,
+133,Mazārī',Mazārī',,Fara',25.4143,56.09123,292885,20,,houses,place,False,ok,Hām (Wādi),654,619,
+134,Hafaitāt,Sharqiyīn,Hafaitāt,Manāmah,25.3299,56.02188,292799,7,7 or 8,houses,place,False,ok,Hām (Wādi),654,619,
+135,Hafaitāt,Sharqiyīn,Hafaitāt,Masāfi,25.30129,56.16531,291501,25,half of 50,houses,place,False,ok,Hām (Wādi),654,619,
+136,Mahārizah,Mahārizah,,Masāfi,25.30129,56.16531,291501,25,half of 50,houses,place,False,ok,Hām (Wādi),654,619,
+137,Dhabābihah,Dhabābihah,,Sfuni,25.1707,56.10159,292173,40,,houses,place,False,ok,Hām (Wādi),654,619,
+138,Mazārī',Mazārī',,Sfuni,25.1707,56.10159,292173,30,,houses,place,False,ok,Hām (Wādi),654,619,
+139,Qawāid,Qawāid,,Shōkah,25.1,56.03333,290812,10,,families,place,False,ok,Hām (Wādi),654,619,'Practically Bedouins'
+140,Zahūm,Zahūm,,Sīji,25.24764,56.07719,290759,20,,houses,place,False,ok,Hām (Wādi),655,620,
+141,Sharqiyīn and Mahārizah,Mixed,Sharqiyīn and Mahārizah,Taiyibah,25.41228,56.17075,290664,50,,houses,place,False,ok,Hām (Wādi),655,620,
+142,Mazārī',Mazārī',,Adhan,25.46383,55.99476,291840,40,,houses,place,False,ok,Jiri,989,942,
+143,Sharqiyīn,Sharqiyīn,,Habhab,25.61564,56.00441,292053,35,,houses,place,False,ok,Jiri,989,942,
+144,"'Awānāt, Naqbiyīn and Sharqiyīn",Mixed,"'Awānāt, Naqbiyīn and Sharqiyīn",Khatt,25.61729,56.01113,291708,100,,houses,place,False,ok,Jiri,990,943,
+145,Shihūh,Shihūh,Bani Shatair ('Ayāl Sa'ad),Ghalīlah,25.9975,56.07444,292119,50,,houses,place,False,ok,Khaimah (Rās-al-) District,1052,1005,
+146,Bani Shatair,Shihūh,Bani Shatair,Khor Khuwair,25.96577,56.05471,291693,30,,houses,place,False,ok,Khaimah (Rās-al-) District,1052,1005,
+147,Sharqiyīn,Sharqiyīn,,Shariyah,25.1,56.03333,290822,10,,houses,place,False,check,Khaimah (Rās-al-) District,1053,1006,Coordinate: CSV point is the same as Shōkah; Lorimer puts it in the hills NW of Dibah
+148,Sharqiyīn,Sharqiyīn,,Wamm,25.60031,56.22838,290509,30,,houses,place,False,ok,Khaimah (Rās-al-) District,1053,1006,
+149,Ahl Rās-al-Khaimah (mixed Arab),Ahl Rās-al-Khaimah (mixed Arab),,Rās-al-Khaimah Town,25.78953,55.9432,291074,400,may number 400,houses,place,False,ok,Khaimah (Rās-al-) Town,1057,1008,
+150,Mahārah,Mahārah,,Rās-al-Khaimah Town,25.78953,55.9432,291074,250,,houses,place,False,ok,Khaimah (Rās-al-) Town,1057,1008,
+151,Balūchis,Balūchis,,Rās-al-Khaimah Town,25.78953,55.9432,291074,10,,families,place,False,ok,Khaimah (Rās-al-) Town,1057,1008,
+152,Bani Shatair,Shihūh,Bani Shatair,Sha'am,26.0279,56.08352,292674,300,about 300,houses,place,False,ok,Sha'am,1771,1684,
+153,Sharqiyīn,Sharqiyīn,,Bidyah,25.43227,56.34574,292596,300,about 300,houses,place,False,ok,Bidyah,313,298,
+154,Sharqiyīn,Sharqiyīn,,Dhadnah,25.52422,56.35868,292309,50,,houses,place,False,ok,Shamailīyah,1784,1695,
+155,Kunūd and Jalājilah,Mixed,Kunūd and Jalājilah,Furfār,25.14844,56.22242,292187,10,about 10,houses,place,False,ok,Shamailīyah,1784,1695,
+156,Sharqiyīn,Sharqiyīn,,Gharaifah,25.12496,56.35381,292871,50,,huts,place,False,ok,Shamailīyah,1784,1695,
+157,Sharqiyīn,Sharqiyīn,,Gharfah,25.12496,56.35381,292871,100,,houses,place,False,check,Shamailīyah,1785,1696,Coordinate: CSV gives Gharaifah's point; Lorimer puts Gharfah immediately south of Dibah
+158,Bani Sa'ad,Shihūh,Bani Sa'ad,Ghūnah,25.26994,56.31425,292072,50,,houses,place,False,ok,Shamailīyah,1785,1696,Lorimer: a section of the Shihūh 'or possibly of the Dhawāhir'
+159,Jalājilah and Kunūd,Mixed,Jalājilah and Kunūd,Hail (Shamailīyah),25.09223,56.24418,291925,10,about 10,houses,place,False,ok,Shamailīyah,1785,1696,
+160,Bani Hamīd,Bani Hamīd,,Hair (Shamailīyah),25.38148,55.41955,292850,6,,houses,place,False,check,Shamailīyah,1785,1696,Coordinate: CSV gives Hairah near Shārjah; Lorimer puts this Hair SW of Khor Fakkān
+161,Naqbiyīn,Naqbiyīn,,Lūlaiyah,25.39258,56.35464,291598,50,,houses,place,False,ok,Shamailīyah,1785,1696,
+162,Bani Sa'ad,Shihūh,Bani Sa'ad,Mad-hah,25.28345,56.3328,291586,100,,houses,place,False,ok,Shamailīyah,1785,1696,Lorimer: a section of the Shihūh 'or possibly of the Dhawāhir'
+163,Sharqiyīn,Sharqiyīn,,Marbah,25.27623,56.36256,291339,100,,houses,place,False,ok,Shamailīyah,1785,1696,
+164,Sharqiyīn,Sharqiyīn,,Qaraiyah,25.23779,56.36128,292761,100,,houses,place,False,ok,Shamailīyah,1786,1697,
+165,Sharqiyīn,Sharqiyīn,,Qidfa',25.29155,56.36352,291155,100,,houses,place,False,ok,Shamailīyah,1786,1697,"Table says 'Do.', repeating Qaraiyah's entry"
+166,Sharqiyīn,Sharqiyīn,,Rūl Dhadnah,25.55481,56.34546,291035,40,about 40,houses,place,False,ok,Shamailīyah,1786,1697,
+167,Sharqiyīn,Sharqiyīn,,Rūl Dibah,25.60106,56.3228,292689,40,about 40,houses,place,False,ok,Shamailīyah,1786,1697,
+168,Sharqiyīn,Sharqiyīn,,Saqamqam,25.17467,56.33039,290909,30,,houses,place,False,ok,Shamailīyah,1786,1697,
+169,Sharqiyīn,Sharqiyīn,,Sharam,25.47078,56.35319,290820,40,,houses,place,False,ok,Shamailīyah,1786,1697,
+170,Hafaitāt,Sharqiyīn,Hafaitāt,Sufad,25.22314,56.29944,290975,15,,houses,place,False,ok,Shamailīyah,1787,1698,
+171,Naqbiyīn,Naqbiyīn,,Zubārah,25.40487,56.35971,290409,50,,houses,place,False,ok,Shamailīyah,1787,1698,
+172,Shwaihiyīn,Shwaihiyīn,,Shārjah Town,25.33737,55.41206,292672,400,,houses,place,False,ok,Shārjah Town,1851,1762,
+173,Matārīsh,Matārīsh,,Shārjah Town,25.33737,55.41206,292672,200,,houses,place,False,ok,Shārjah Town,1851,1762,
+174,"Mixed tribes, mostly Arab (Hārat-as-Sūq)",Mixed,"Mixed tribes, mostly Arab (Hārat-as-Sūq)",Shārjah Town,25.33737,55.41206,292672,700,about 700,houses,place,False,ok,Shārjah Town,1851,1762,
+175,Bani Shamaili,Bani Shamaili,,Shimil,25.8178,56.01088,290795,200,,houses,place,False,ok,Sīr,1914,1825,
+176,Mixed tribes,Mixed,Mixed tribes,Ghubb,25.80529,55.98003,292083,40,,houses,place,False,ok,Sīr,1914,1825,
+177,Bayādir (peasant class),Bayādir (peasant class),,Hadaibah,25.79767,55.98029,291887,30,,houses,place,False,ok,Sīr,1914,1825,
+178,Bayādir (peasant class),Bayādir (peasant class),,'Araibi,25.78945,55.97665,290550,40,,houses,place,False,ok,Sīr,1914,1825,
+179,Bayādir (peasant class),Bayādir (peasant class),,Qawais,,,,7,7 or 8,houses,place,False,missing,Sīr,1914,1825,
+180,Bayādir (peasant class),Bayādir (peasant class),,Qasaidāt,25.77461,55.97002,291124,20,,houses,place,False,ok,Sīr,1915,1826,
+181,Mixed tribes,Mixed,Mixed tribes,Falaiyah,25.73481,55.98284,292877,15,,families,place,False,ok,Sīr,1915,1826,
+182,Bani Hadīyah,Shihūh,Bani Hadīyah,Hail (Sīr),25.70498,55.98701,292854,50,,houses,place,False,ok,Sīr,1915,1826,
+183,Naqbiyīn,Naqbiyīn,,Fahlain,25.68412,55.96749,292888,60,,houses,place,False,ok,Sīr,1915,1826,
+184,Bani Yās,Bani Yās,,Tunb Island,26.26389,55.305,112659,2,,huts,place,False,ok,Tunb,2001,1908,"Two of the island's six huts, families originally from Dibai"

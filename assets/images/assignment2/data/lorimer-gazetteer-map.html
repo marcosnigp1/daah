@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>kepler.gl embedded map</title>
+
+    <!--Uber Font-->
+    <link rel="stylesheet" href="https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/uber-fonts/4.0.0/superfine.css">
+
+    <!--Kepler css-->
+    <link href="https://unpkg.com/kepler.gl@3.3.0-alpha.18/umd/keplergl.min.css" rel="stylesheet">
+
+    <!--MapLibre css-->
+    <link href="https://unpkg.com/maplibre-gl@^4/dist/maplibre-gl.css" rel="stylesheet">
+
+    <!--
+      React >= 19 no longer ships UMD builds, so we load React and the other
+      peer dependencies as ES modules from esm.sh via an import map, then
+      expose them as window globals that the kepler.gl UMD bundle expects.
+
+      es-module-shims runs in "shim mode" so the page also works when opened
+      as a local file:// (native import maps are blocked under file://).
+    -->
+    <script>
+      window.esmsInitOptions = {shimMode: true, version: '2.8.1'};
+    </script>
+    <script async src="https://ga.jspm.io/npm:es-module-shims@2.8.1/dist/es-module-shims.js" crossorigin="anonymous"></script>
+
+    <script type="importmap-shim">
+      {
+        "imports": {
+          "react":              "https://esm.sh/react@19.1.0",
+          "react/jsx-runtime":  "https://esm.sh/react@19.1.0/jsx-runtime",
+          "react-dom":          "https://esm.sh/react-dom@19.1.0?external=react",
+          "react-dom/client":   "https://esm.sh/react-dom@19.1.0/client?external=react",
+          "redux":              "https://esm.sh/redux@5.0.1",
+          "react-redux":        "https://esm.sh/react-redux@9.3.0?external=react,react-dom,redux",
+          "styled-components":  "https://esm.sh/styled-components@6.1.19?external=react,react-dom"
+        }
+      }
+    </script>
+
+    <!--
+      Expose the ES modules as globals for the kepler.gl UMD bundle, then
+      dynamically load that bundle and run the bootstrap scripts once ready.
+    -->
+    <script type="module-shim">
+      import * as React            from 'react';
+      import * as ReactDOM         from 'react-dom';
+      import * as ReactDOMClient   from 'react-dom/client';
+      import * as Redux            from 'redux';
+      import * as ReactRedux       from 'react-redux';
+      import * as StyledComponents from 'styled-components';
+
+      window.React       = React.default || React;
+      window.ReactDOM    = Object.assign({}, ReactDOM.default || ReactDOM, ReactDOMClient);
+      window.Redux       = Redux.default || Redux;
+      window.ReactRedux  = ReactRedux.default || ReactRedux;
+      window.styled      = Object.assign(StyledComponents.default, StyledComponents);
+
+      function loadScript(src) {
+        return new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          s.src = src; s.crossOrigin = 'anonymous';
+          s.onload = resolve; s.onerror = reject;
+          document.head.appendChild(s);
+        });
+      }
+
+      loadScript('https://unpkg.com/kepler.gl@3.3.0-alpha.18/umd/keplergl.min.js')
+        .then(function() {
+          document.querySelectorAll('script[type="text/kepler-bootstrap"]').forEach(function(node) {
+            var s = document.createElement('script');
+            s.text = node.textContent;
+            document.body.appendChild(s);
+          });
+        })
+        .catch(function(err) { console.error('kepler.gl: failed to load UMD bundle', err); });
+    </script>
+
+    <style type="text/css">
+      body {margin: 0; padding: 0; overflow: hidden;}
+    </style>
+
+    <script>
+      const MAPBOX_TOKEN = "";
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/kepler-bootstrap">
+      /** STORE **/
+      const reducers = (function createReducers(redux, keplerGl) {
+        return redux.combineReducers({
+          keplerGl: keplerGl.keplerGlReducer.initialState({
+            uiState: {
+              readOnly: false,
+              currentModal: null
+            }
+          })
+        });
+      }(Redux, KeplerGl));
+
+      const middleWares = (function createMiddlewares(keplerGl) {
+        return keplerGl.enhanceReduxMiddleware([]);
+      }(KeplerGl));
+
+      const enhancers = (function createEnhancers(redux, middles) {
+        return redux.applyMiddleware(...middles);
+      }(Redux, middleWares));
+
+      const store = (function createStore(redux, enhancers) {
+        return redux.legacy_createStore(reducers, {}, redux.compose(enhancers));
+      }(Redux, enhancers));
+      /** END STORE **/
+
+      /** COMPONENTS **/
+      var KeplerElement = (function makeKeplerElement(react, keplerGl, mapboxToken) {
+        return function App() {
+          var _useState = react.useState({
+            width: window.innerWidth,
+            height: window.innerHeight
+          });
+          var windowDimension = _useState[0];
+          var setDimension = _useState[1];
+          react.useEffect(function sideEffect() {
+            function handleResize() {
+              setDimension({width: window.innerWidth, height: window.innerHeight});
+            }
+            window.addEventListener('resize', handleResize);
+            return function() { window.removeEventListener('resize', handleResize); };
+          }, []);
+          return react.createElement(
+            'div',
+            {style: {position: 'absolute', left: 0, width: '100vw', height: '100vh'}},
+            react.createElement(keplerGl.KeplerGl, Object.assign({
+              mapboxApiAccessToken: mapboxToken,
+              id: "map",
+              width: windowDimension.width,
+              height: windowDimension.height,
+              appName: "kepler.gl"
+            }, undefined !== undefined ? {theme: undefined} : {}))
+          );
+        };
+      }(React, KeplerGl, MAPBOX_TOKEN));
+
+      const app = (function createReactReduxProvider(react, reactRedux, KeplerElement) {
+        return react.createElement(
+          reactRedux.Provider,
+          {store},
+          react.createElement(KeplerElement, null)
+        );
+      }(React, ReactRedux, KeplerElement));
+      /** END COMPONENTS **/
+
+      /** Render **/
+      (function render(reactDOM, app) {
+        const root = reactDOM.createRoot(document.getElementById('app'));
+        root.render(app);
+      }(ReactDOM, app));
+    </script>
+
+    <script type="text/kepler-bootstrap">
+      (function customize(keplerGl, store) {
+        var datasets = [];
+  datasets.push({info: {id: "House locations", label: "House locations"}, data: keplerGl.processCsvData("PLACE_NAME,LATITUDE,LONGITUDE,HOUSES,FAMILIES,COORD_FLAG,HOUSE_RANGE\r\nShārjah Town,25.33737,55.41206,2600,\"Mixed tribes, mostly Arab (Hārat-as-Sūq): 700; Shwaihiyīn: 400; Hūwalah: 300 households; Sūdān: 300; 'Abādilah: 200; Āl 'Ali: 200 families; Āl Bū Mahair: 200; Matārīsh: 200; Āl Bū Shāmis: 100\",ok,193+\r\nDibai Town,25.07725,55.30927,2030,\"Āl Bū Mahair: 400; Āl Bū Falāsah: 400; Mixed tribes, chiefly Arabs (incl. Mazārī', Bahrainis, Kuwaitis): 400; Sūdān: 250; Persians: 250; Balūchis: 200; Natives of the Hasa Oasis: 50; Sabāis: 40; Marar: 30; Shwaihiyīn: 10\",ok,193+\r\nAbu Dhabi Town / Abu Dhabi Town (neighbourhood),24.45118,54.39696,1410,Sūdān (Abu Dhabi Town): 375; Āl Bū Hamīr (Abu Dhabi Town (neighbourhood)): 140; Hawāmil (Abu Dhabi Town): 100; Āl Bū Mahair (Abu Dhabi Town): 100; Rumaithāt (Abu Dhabi Town): 100; Qumzān (Abu Dhabi Town (neighbourhood)): 100; Qubaisāt (Abu Dhabi Town): 75; Āl Bū Hamīr (Abu Dhabi Town): 60; Mazārī' (Abu Dhabi Town): 60; Mahāribah (Abu Dhabi Town): 60; Mahāribah (Abu Dhabi Town (neighbourhood)): 50; Hawāmil (Abu Dhabi Town (neighbourhood)): 50; Qumzān (Abu Dhabi Town): 50; Marar (Abu Dhabi Town): 40; Āl Bū Falāsah (Abu Dhabi Town): 40; Āl Bū Falāh (Abu Dhabi Town): 10,ok,193+\r\nUmm-al-Qaiwain Town,25.56473,55.55517,1030,Āl 'Ali: 1000 families; Āl Bū Mahair: 30,ok,193+\r\nRās-al-Khaimah Town,25.78953,55.9432,930,Ahl Rās-al-Khaimah (mixed Arab): 400; Mahārah: 250; Āl 'Ali: 150 families; Āl Bū Mahair: 120; Balūchis: 10 families,ok,193+\r\nDhank Town,23.55054,56.25725,660,Na'īm: 660,ok,193+\r\nJazīrat-al-Hamra,25.70361,55.79556,500,Za'āb: 500,ok,193+\r\nRams,25.87658,56.01862,400,Tanaij: 400,ok,193+\r\nLaiyah (Shārjah Town),25.35397,55.37189,300,Marar: 200; Sūdān: 100,ok,193+\r\nBidyah,25.43227,56.34574,300,Sharqiyīn: 300,ok,193+\r\nSha'am,26.0279,56.08352,300,Bani Shatair: 300,ok,193+\r\nHairah / Hair (Shamailīyah),25.38148,55.41955,256,Darāwishah (Hairah): 250; Bani Hamīd (Hair (Shamailīyah)): 6,check,193+\r\nHamrīyah,25.47819,55.53377,250,Darāwishah: 250,ok,193+\r\nSanainah,23.6065,55.95448,200,Na'īm: 200,ok,193+\r\nShimil,25.8178,56.01088,200,Bani Shamaili: 200,ok,193+\r\nDibah,25.61955,56.27291,175,Bayādir (peasant class): 100; 'Awānāt: 50; Naqbiyīn: 15; Sharqiyīn: 10,ok,81 to 192\r\nFujairah,25.11641,56.34141,150,Sharqiyīn: 150,ok,81 to 192\r\nKhor Fakkān,25.33132,56.34199,150,Naqbiyīn and Arabicised Persians: 150,ok,81 to 192\r\nKhor Kalba,25.02193,56.36463,150,Za'āb: 150 families,ok,81 to 192\r\nGharfah / Gharaifah,25.12496,56.35381,150,Sharqiyīn (Gharfah): 100; Sharqiyīn (Gharaifah): 50 huts,check,81 to 192\r\nHafīt,23.98885,55.83227,150,Na'īm: 150,ok,81 to 192\r\n'Ajmān Town,25.40177,55.47878,148,Āl Bū Mahair: 80; Na'īm: 25; Āl Bū Kalbi: 14; Sūdān: 12; Shāqōsh: 12; Masāibah: 5,ok,81 to 192\r\nDhaid,25.28812,55.88157,140,Tanaij: 70; Bani Qitab: 40; Khawātir: 30,ok,81 to 192\r\nUmm-al-Qaiwain (hinterland),25.5,55.75,140,Āl 'Ali: 140 families,ok,81 to 192\r\nBatīn,24.4429,54.35539,130,Āl Bū Mahair: 100; Sūdān: 30,ok,81 to 192\r\nMad-hah,25.28345,56.3328,100,Bani Sa'ad: 100,ok,81 to 192\r\nQidfa',25.29155,56.36352,100,Sharqiyīn: 100,ok,81 to 192\r\nQaraiyah,25.23779,56.36128,100,Sharqiyīn: 100,ok,81 to 192\r\nKhatt,25.61729,56.01113,100,\"'Awānāt, Naqbiyīn and Sharqiyīn: 100\",ok,81 to 192\r\nMarbah,25.27623,56.36256,100,Sharqiyīn: 100,ok,81 to 192\r\nKhannūr,23.10092,53.60594,100,Mazārī': 100 huts,ok,81 to 192\r\nBaraimi Village,24.25088,55.79312,100,Na'īm: 100,ok,81 to 192\r\nSu'arah,24.25,55.78389,100,Na'īm: 100,ok,81 to 192\r\nMūqab,23.09784,53.69551,80,Bani Shikr: 80 huts,ok,51 to 80\r\nMuzaira'ah,23.14355,53.7881,80,Bani Yās: 80 huts,ok,51 to 80\r\nSirri Island,25.90833,54.53167,70,Sūdān: 40 families; Hūwalah: 30 families,ok,51 to 80\r\nMārīyah,23.13848,53.7426,70,Bani Yās: 70 huts,ok,51 to 80\r\nLīwah,22.97478,54.19517,70,Marar: 70 families,ok,51 to 80\r\nSfuni,25.1707,56.10159,70,Dhabābihah: 40; Mazārī': 30,ok,51 to 80\r\nShāh,23.13561,53.91653,60,Bani Yās: 60 huts,ok,51 to 80\r\nKhān,25.33141,55.35901,60,Āl Bū Mahair: 60,ok,51 to 80\r\nFalaj Āl 'Ali,25.35401,55.85332,60,Āl 'Ali: 60 households,ok,51 to 80\r\nFahlain,25.68412,55.96749,60,Naqbiyīn: 60,ok,51 to 80\r\nTharwānīyah,23.11088,54.01572,55,Āl Bū Mindhir: 30 huts; Hawāmil: 25 households,ok,51 to 80\r\nGhalīlah,25.9975,56.07444,50,Shihūh: 50,ok,31 to 50\r\nHail (Sīr),25.70498,55.98701,50,Bani Hadīyah: 50,ok,31 to 50\r\nMasāfi,25.30129,56.16531,50,Hafaitāt: 25; Mahārizah: 25,ok,31 to 50\r\nTaiyibah,25.41228,56.17075,50,Sharqiyīn and Mahārizah: 50,ok,31 to 50\r\n'Asimah,25.39831,56.15073,50,Mazārī' and Shahairah: 50,ok,31 to 50\r\nGhūnah,25.26994,56.31425,50,Bani Sa'ad: 50,ok,31 to 50\r\nSamaih,24.72276,54.77993,50,Rumaithāt: 50,ok,31 to 50\r\n'Idd,23.0794,53.5548,50,Āl Bū Mindhir: 50 huts,ok,31 to 50\r\nDhadnah,25.52422,56.35868,50,Sharqiyīn: 50,ok,31 to 50\r\nLūlaiyah,25.39258,56.35464,50,Naqbiyīn: 50,ok,31 to 50\r\nZubārah,25.40487,56.35971,50,Naqbiyīn: 50,ok,31 to 50\r\nBithnah,25.18951,56.23516,50,Sharqiyīn: 50,ok,31 to 50\r\nJumairah,25.20795,55.24969,45,\"Bani Yās, Manāsīr and mixed tribes: 45 huts\",ok,31 to 50\r\n'Araibi,25.78945,55.97665,40,Bayādir (peasant class): 40,ok,31 to 50\r\nSharam,25.47078,56.35319,40,Sharqiyīn: 40,ok,31 to 50\r\nAdhan,25.46383,55.99476,40,Mazārī': 40,ok,31 to 50\r\nRūl Dhadnah,25.55481,56.34546,40,Sharqiyīn: 40,ok,31 to 50\r\nTaraq,23.02725,53.88404,40,Mahāribah: 40 huts,ok,31 to 50\r\nHuwailah,23.15201,53.82462,40,Mazārī': 40 huts,ok,31 to 50\r\nShidaq-al-Kalb,23.13385,53.73315,40,Bani Yās: 40 huts,ok,31 to 50\r\nGhāllah,25.0513,56.35422,40,'Abādilah: 20; Kunūd: 20 families,ok,31 to 50\r\nQarmidah,23.11234,53.82152,40,Bani Yās: 40 huts,ok,31 to 50\r\nRūl Dibah,25.60106,56.3228,40,Sharqiyīn: 40,ok,31 to 50\r\nGhubb,25.80529,55.98003,40,Mixed tribes: 40,ok,31 to 50\r\nHabhab,25.61564,56.00441,35,Sharqiyīn: 35,ok,31 to 50\r\nSālimi,22.9118,54.3397,30,Mahāribah: 30 huts,ok,16 to 30\r\nHamaim,22.95805,54.29721,30,Āl Taraif: 30 huts,ok,16 to 30\r\nSubakhah,23.12917,53.98181,30,Hawāmil: 30 huts,ok,16 to 30\r\nDhafīr,23.12731,53.75439,30,Mahāribah: 30 huts,ok,16 to 30\r\nDhawaihir,23.28333,53.2,30,Bani Yās: 30 huts,ok,16 to 30\r\nKhor Khuwair,25.96577,56.05471,30,Bani Shatair: 30,ok,16 to 30\r\nWamm,25.60031,56.22838,30,Sharqiyīn: 30,ok,16 to 30\r\nHadaibah,25.79767,55.98029,30,Bayādir (peasant class): 30,ok,16 to 30\r\nSaqamqam,25.17467,56.33039,30,Sharqiyīn: 30,ok,16 to 30\r\nWahaidah,23.13333,53.93333,25,Hawāmil: 25 huts,ok,16 to 30\r\nQutūf,23.10971,53.72738,25,Qubaisāt: 25 huts,ok,16 to 30\r\nYaif,23.15786,53.77762,25,Qubaisāt: 25 huts,ok,16 to 30\r\nSīji,25.24764,56.07719,20,Zahūm: 20,ok,16 to 30\r\n'Attāb,23.1518,53.8811,20,Qubaisāt: 20 huts,ok,16 to 30\r\nAbu Dhabi Principality,23.66667,54.0,20,Āl Bū Mahair: 20 households,ok,16 to 30\r\nWazīl,23.0474,54.13332,20,Hawāmil: 20 huts,ok,16 to 30\r\nFara',25.4143,56.09123,20,Mazārī': 20,ok,16 to 30\r\nBū Mūsa Island,25.875,55.03,20,Sūdān: 20,ok,16 to 30\r\nQasaidāt,25.77461,55.97002,20,Bayādir (peasant class): 20,ok,16 to 30\r\nShōkah / Shariyah,25.1,56.03333,20,Qawāid (Shōkah): 10 families; Sharqiyīn (Shariyah): 10,check,16 to 30\r\nKaiyih,23.15696,53.68541,20,Bani Yās: 20 huts,ok,16 to 30\r\nFalaiyah,25.73481,55.98284,15,Mixed tribes: 15 families,ok,1 to 15\r\nKhalaibīyah,25.38124,56.17358,15,'Abādilah: 15,ok,1 to 15\r\nHādhi,23.10642,53.99527,15,Hawāmil: 15 huts,ok,1 to 15\r\nSuhail,24.80812,56.18258,15,Mazārī': 15 families,check,1 to 15\r\nDalmah Island,24.51099,52.30893,15,Qubaisāt: 15,ok,1 to 15\r\nLatīr (I),23.16261,53.73617,15,Qanaisāt: 15 huts,ok,1 to 15\r\nSufad,25.22314,56.29944,15,Hafaitāt: 15,ok,1 to 15\r\nHaqālah,23.75976,56.32029,10,Āl Bū Shāmis: 10,check,1 to 15\r\nDiftah,25.27226,56.18353,10,Naqbiyīn: 10,ok,1 to 15\r\nJarrah,24.05,54.1,10,Āl Bū Sha'ar: 10 huts,check,1 to 15\r\nFurfār,25.14844,56.22242,10,Kunūd and Jalājilah: 10,ok,1 to 15\r\nHail (Shamailīyah),25.09223,56.24418,10,Jalājilah and Kunūd: 10,ok,1 to 15\r\nManāmah,25.3299,56.02188,7,Hafaitāt: 7,ok,1 to 15\r\nDāhin,24.48333,56.06667,6,Āl Bū Mindhir: 6,check,1 to 15\r\nBilaidah,25.22388,56.20221,4,Sharqiyīn: 4,ok,1 to 15\r\nTunb Island,26.26389,55.305,2,Bani Yās: 2 huts,ok,1 to 15\r\n")});
+  datasets.push({info: {id: "Bounding box", label: "Bounding box"}, data: keplerGl.processGeojson({"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"name": "Bounding box"}, "geometry": {"type": "Polygon", "coordinates": [[[51.6790170703, 22.1610709611], [56.4470834765, 22.1610709611], [56.4470834765, 26.2729225595], [51.6790170703, 26.2729225595], [51.6790170703, 22.1610709611]]]}}]})});
+
+        var config = {"version": "v1", "config": {"mapState": {"latitude": 24.739246320754717, "longitude": 55.38078660377359, "zoom": 6}, "visState": {"layers": [{"id": "house-count-heatmap", "type": "heatmap", "config": {"dataId": "House locations", "label": "House count heatmap", "columns": {"lat": "LATITUDE", "lng": "LONGITUDE"}, "isVisible": true, "visConfig": {"opacity": 0.8, "radius": 25, "intensity": 1, "threshold": 0.05, "colorRange": {"name": "Blues", "colors": ["#deebf7", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#084594"]}}}, "visualChannels": {"weightField": {"name": "HOUSES", "type": "integer"}, "weightScale": "linear", "colorField": {"name": "HOUSES", "type": "real"}, "colorScale": "quantile"}}, {"id": "house-count-points", "type": "point", "config": {"dataId": "House locations", "label": "House counts", "color": [255, 87, 34], "columns": {"lat": "LATITUDE", "lng": "LONGITUDE"}, "isVisible": true, "visConfig": {"radiusRange": [4, 30], "fixedRadius": false, "opacity": 0.85, "outline": false, "colorRange": {"name": "Blues", "colors": ["#deebf7", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#084594"]}}}, "visualChannels": {"sizeField": {"name": "HOUSES", "type": "integer"}, "sizeScale": "sqrt", "colorField": {"name": "HOUSES", "type": "real"}, "colorScale": "quantile"}}, {"id": "bounding-box", "type": "geojson", "config": {"dataId": "Bounding box", "label": "Bounding box", "color": [0, 0, 0], "columns": {"geojson": "_geojson"}, "isVisible": true, "visConfig": {"opacity": 0.15, "strokeOpacity": 0.8, "thickness": 2, "filled": true}}}], "filters": [{"dataId": ["House locations"], "id": "coord-flag", "name": ["COORD_FLAG"], "type": "multiSelect", "value": ["ok", "check"], "enlarged": false}], "interactionConfig": {"tooltip": {"enabled": true, "fieldsToShow": {"House locations": [{"name": "PLACE_NAME", "format": null}, {"name": "HOUSES", "format": null}, {"name": "HOUSE_RANGE", "format": null}, {"name": "FAMILIES", "format": null}, {"name": "COORD_FLAG", "format": null}]}}}}}};
+
+        window.setTimeout(function() {
+          store.dispatch(keplerGl.addDataToMap({
+            datasets: datasets,
+            config: config,
+            options: {
+              centerMap: true
+            }
+          }));
+        }, 500);
+      }(KeplerGl, store));
+    </script>
+  </body>
+</html>
