@@ -82,9 +82,13 @@ An important distinction here is that the map shows recorded houses rather than 
 
 ---
 
-We believe that the reasons for the most densely populated areas being along the coastline are pearl fishing, fishing for food, and trade. Pearl fishing was the primary source of income on publication of the Gazetteer in 1915 (Lorimer 1438). Pearl fishing being a source of income attracts people in the region to join and perhaps make an income. With the pearls came trade which may have also been a source of food. An additional source of food would be fishing (1440). Altogether with pearl trading attracting people and fishing and trade supplying the food to feed the influx of people that could explain why it’s populated and other places in the region are not.
+We believe that the reasons for the most densely populated areas being along the coastline are pearl fishing, fishing for food, and trade. Pearl fishing was the primary source of income on publication of the Gazetteer in 1915 (Lorimer, 1908, p. 1438). Pearl fishing being a source of income attracts people in the region to join and perhaps make an income. With the pearls came trade which may have also been a source of food. An additional source of food would be fishing (p. 1440). Altogether with pearl trading attracting people and fishing and trade supplying the food to feed the influx of people that could explain why it’s populated and other places in the region are not.
 
-As for Liwa, the houses there could be explained by there being fertile land (Harris). Because it’s not as densely populated but there is still a rural population fertile land and hence farming would explain how people could live there. But, with farming being the only source of food it wouldn’t be able to support a larger population.
+As for Liwa, the houses there could be explained by there being fertile land (Harris 1977). Because it’s not as densely populated but there is still a rural population fertile land and hence farming would explain how people could live there. But, with farming being the only source of food it wouldn’t be able to support a larger population.
+
+There are still some points on the map that are more inland and in the mountainous region, in particular Ruus-al-Jibal. From what we found they farmed goats, and grain, then collected rainwater in natural rock pools. In addition, they would still import some of their food from the nearby coastal areas (Lorimer, 1908, p. 1809).
+
+From our reading we took inspiration from the article “Data organization in spreadsheets” which gives a protocol to follow when making spreadsheets (Broman & Woo, 2018). For example, for our work we used CSV files exclusively for simplicity. We did not do any calculations on the tables and instead kept it to the python script. However, one thing we should have added but in hindsight forgot to was a data dictionary. We had become used to what the headings were and what each column and row should look like and lastly we had the LLM do much of the scripting for us.
 
 # Limitations
 
@@ -106,6 +110,12 @@ From this assignment we could apply some of the new knowledge that was given to 
 
 ---
 
-Harris, Tony. “The Liwa Oasis.” Emirates Natural History Group Bulletin, no. 2, June 1977, enhg.org/bulletin/b02/02_11.HTM
+Barakat, N., & Wrisley, D. J. (Eds.). (2026). A dataset of place names from J.G. Lorimer’s Gazetteer of the Persian Gulf, Central Arabia and Oman (1908) (Version 1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20122587
 
-Lorimer, J. G. (1908). Gazetteer of the Persian Gulf, ‘Oman and Central Arabia. Vol. II: Geographical and Statistical. Government of India. See “‘Oman (Trucial),” pp. 1438–1440.
+Broman, K. W., & Woo, K. H. (2018). Data organization in spreadsheets. The American Statistician, 72(1), 2–10. https://doi.org/10.1080/00031305.2017.1375989
+
+Harris, T. (1977, June). The Liwa Oasis. Emirates Natural History Group Bulletin, 2. https://enhg.org/bulletin/b02/02_11.HTM
+
+Lorimer, J. G. (1908). Gazetteer of the Persian Gulf, ‘Oman and Central Arabia (Vol. 2, Geographical and Statistical, pp. 1438–1440, 1809). Superintendent Government Printing, India. https://archive.org/details/in.ernet.dli.2015.206964
+
+READY FOR GRADING
